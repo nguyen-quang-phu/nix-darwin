@@ -50,5 +50,9 @@
       email = "config --local user.email";
       name = "config --local user.name";
     };
+    ignores = [
+      ".DS_Store"
+      "Thumbs.db"
+    ];
   };
 }

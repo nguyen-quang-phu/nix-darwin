@@ -3,9 +3,13 @@
 {
   # import sub modules
   imports = [
+    ./alacritty.nix
     ./core.nix
     ./git.nix
     ./starship.nix
+    ./zellij.nix
+    ./zsh.nix
+    ./neovim.nix
   ];
 
   # Home Manager needs a bit of information about you and the
