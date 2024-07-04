@@ -16,15 +16,51 @@
     enable = true;
     lfs.enable = true;
 
-    # TODO replace with your own name & email
-    userName = username;
-    userEmail = useremail;
-
     includes = [
       {
-        # use different email & name for work
-        path = "~/work/.gitconfig";
-        condition = "gitdir:~/work/";
+        condition = "gitdir:~/.config/";
+        contents = {
+          user = {
+            email = useremail;
+            name = username;
+          };
+        };
+      }
+      {
+        condition = "gitdir:~/Code/Personal/";
+        contents = {
+          user = {
+            email = useremail;
+            name = username;
+          };
+        };
+      }
+      {
+        condition = "gitdir:~/Code/GO/GIGADMIN/harvey/";
+        contents = {
+          user = {
+            email = "harvey.nguyen.goldenowl@gmail.com";
+            name = "harvey-gig";
+          };
+        };
+      }
+      {
+        condition = "gitdir:~/Code/GO/GIGADMIN/sean/";
+        contents = {
+          user = {
+            email = "sean.tran.goldenowl@gmail.com";
+            name = "sean-gig";
+          };
+        };
+      }
+      {
+        condition = "gitdir:~/Code/GO/GIGADMIN/troy/";
+        contents = {
+          user = {
+            email = "troy.tran.goldenowl@gmail.com";
+            name = "troy-gig";
+          };
+        };
       }
     ];
 
@@ -54,5 +90,13 @@
       ".DS_Store"
       "Thumbs.db"
     ];
+  };
+
+  programs.git-cliff = {
+    enable = true;
+  };
+
+  programs.lazygit = {
+    enable = true;
   };
 }
