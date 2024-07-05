@@ -1,6 +1,4 @@
-{ username, ... }:
-
-{
+{username, ...}: {
   # import sub modules
   imports = [
     ./alacritty.nix
@@ -15,7 +13,7 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home = {
-    username = username;
+    inherit username;
     homeDirectory = "/Users/${username}";
 
     # This value determines the Home Manager release that your
@@ -28,7 +26,8 @@
     # changes in each release.
     stateVersion = "24.05";
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+# Let Home Manager install and manage itself.
+  programs = {
+    home-manager.enable = true;
+  };
 }

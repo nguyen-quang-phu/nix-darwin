@@ -1,8 +1,4 @@
-{
-  pkgs,
-  hostname,
-  ...
-}:
+{_}:
 ###################################################################################
 #
 #  macOS's System configuration
@@ -19,6 +15,7 @@
       # so we do not need to logout and login again to make the changes take effect.
       /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
     '';
+    keyboard.enableKeyMapping = false; #
 
     defaults = {
       menuExtraClock.Show24Hour = true; # show 24 hour clock
@@ -33,6 +30,20 @@
         show-recents = false; # Show recent applications in the dock. The default is true.
         showhidden = true; # Whether to make icons of hidden applications tranclucent. The default is false.
         tilesize = 16; # Size of the icons in the dock. The default is 64.
+      };
+      NSGlobalDomain = {
+        AppleShowAllExtensions = true; # Whether to show all file extensions in Finder. The default is false.
+        AppleShowAllFiles = true; # Whether to always show hidden files. The default is false.
+        NSTableViewDefaultSizeMode = 1; # Sets the size of the finder sidebar icons: 1 (small), 2 (medium) or 3 (large). The default is 3.
+      };
+      finder = {
+        AppleShowAllExtensions = true; # Whether to always show file extensions. The default is false.
+        AppleShowAllFiles = true; # Whether to always show hidden files. The default is false.
+        CreateDesktop = false; # Whether to show icons on the desktop or not. The default is true.
+        FXPreferredViewStyle = "clmv"; # Change the default finder view. “icnv” = Icon view, “Nlsv” = List view, “clmv” = Column View, “Flwv” = Gallery View The default is icnv.
+        QuitMenuItem = true; # Whether to allow quitting of the Finder. The default is false.
+        ShowPathbar = true; # Show path breadcrumbs in finder windows. The default is false.
+        ShowStatusBar = true; # Show status bar at bottom of finder windows with item/disk space stats. The default is false.
       };
       # other macOS's defaults configuration.
       # ......

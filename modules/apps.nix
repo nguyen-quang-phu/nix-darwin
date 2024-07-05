@@ -21,6 +21,9 @@
     just
   ];
   environment.variables.EDITOR = "nvim";
+  fonts.packages = with pkgs; [
+    nerdfonts
+  ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
   #
