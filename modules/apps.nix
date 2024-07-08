@@ -48,6 +48,13 @@
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
+      {
+        name = "mysql@8.0";
+        restart_service = true;
+        link = true;
+        conflicts_with = ["mysql"];
+      }
+
       # "aria2"  # download tool
     ];
 
