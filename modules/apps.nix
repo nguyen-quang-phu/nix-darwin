@@ -17,12 +17,15 @@
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
-    git
-    just
+    git # https://github.com/git/git
+    just # https://github.com/casey/just
+    nil # https://github.com/oxalica/nil
+    nix-prefetch-scripts
+    raycast
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
-    nerdfonts
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -31,6 +34,7 @@
   # But on macOS, homebrew has a much larger selection of apps than nixpkgs, especially for GUI apps!
   homebrew = {
     enable = true;
+    global.brewfile = true;
 
     onActivation = {
       autoUpdate = false;
@@ -52,5 +56,7 @@
     casks = [
       # "google-chrome"
     ];
+
+    masApps = {};
   };
 }

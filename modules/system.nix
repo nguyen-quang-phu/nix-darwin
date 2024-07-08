@@ -1,4 +1,4 @@
-{_}:
+{pkgs, ...}:
 ###################################################################################
 #
 #  macOS's System configuration
@@ -47,6 +47,11 @@
       };
       # other macOS's defaults configuration.
       # ......
+      CustomUserPreferences = {
+        "com.apple.finder" = {
+          _FXSortFoldersFirst = true;
+        };
+      };
     };
   };
 
@@ -56,4 +61,6 @@
   # Create /etc/zshrc that loads the nix-darwin environment.
   # this is required if you want to use darwin's default shell - zsh
   programs.zsh.enable = true;
+  environment.shells = with pkgs; [bash zsh];
+  environment.loginShell = pkgs.zsh;
 }

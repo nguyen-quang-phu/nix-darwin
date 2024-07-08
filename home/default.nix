@@ -2,16 +2,29 @@
   # import sub modules
   imports = [
     ./alacritty.nix
+    ./bat.nix
     ./core.nix
+    ./fzf.nix
     ./git.nix
+    ./neovim.nix
     ./starship.nix
     ./zellij.nix
     ./zsh.nix
-    ./neovim.nix
   ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
+  home = {
+    file = {
+      ".config/alacritty/alacritty.toml" = {
+        source = ./dotfiles/alacritty/alacritty.toml;
+      };
+      ".config/alacritty/catppuccin-macchiato.toml" = {
+        source = ./dotfiles/alacritty/catppuccin-macchiato.toml;
+      };
+    };
+  };
+
   home = {
     inherit username;
     homeDirectory = "/Users/${username}";
@@ -26,7 +39,7 @@
     # changes in each release.
     stateVersion = "24.05";
   };
-# Let Home Manager install and manage itself.
+  # Let Home Manager install and manage itself.
   programs = {
     home-manager.enable = true;
   };
