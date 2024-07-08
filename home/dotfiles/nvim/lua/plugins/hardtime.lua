@@ -1,0 +1,50 @@
+return {
+  {
+    -- "m4xshen/hardtime.nvim",
+    -- dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    -- opts = {},
+    -- config = function()
+    --   require("hardtime").setup({
+    --     disabled_filetypes = {
+    --       "Diffview*",
+    --       "Dressing*",
+    --       "Neogit*",
+    --       "NvimTree",
+    --       "TelescopePrompt",
+    --       "Trouble",
+    --       "aerial",
+    --       "alpha",
+    --       "checkhealth",
+    --       "dapui*",
+    --       "help",
+    --       "httpResult",
+    --       "lazy",
+    --       "mason",
+    --       "minifiles",
+    --       "neo-tree*",
+    --       "neotest-summary",
+    --       "netrw",
+    --       "noice",
+    --       "notify",
+    --       "oil",
+    --       "prompt",
+    --       "qf",
+    --       "undotree",
+    --     },
+    --     max_count = 5,
+    --     disabled_keys = {
+    --       ["<Insert>"] = { "", "i" },
+    --       ["<Home>"] = { "", "i" },
+    --       ["<End>"] = { "", "i" },
+    --       ["<PageUp>"] = { "", "i" },
+    --       ["<PageDown>"] = { "", "i" },
+    --     },
+    --   })
+    -- end,
+    -- lazy = false,
+    -- keys = {
+    --   { "j", 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"' },
+    --   { "k", 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"' },
+    -- },
+  },
+}

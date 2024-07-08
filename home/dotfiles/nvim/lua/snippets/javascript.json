@@ -1,0 +1,16 @@
+{
+  "desc": {
+    "prefix": [
+      "jsdoc_component",
+      "jc"
+    ],
+    "body": [
+      "/**",
+      "* @param { $1 } props",
+      "*",
+      "* @returns $2",
+      "*/"
+    ],
+    "description": "Jsdoc React Component"
+  }
+}

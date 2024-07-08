@@ -1,0 +1,88 @@
+{
+  "itEnum": {
+    "description": "[Rspec] It Enum",
+    "body": [
+      "it { is_expected.to define_enum_for(:$1).with_values($2).with_suffix($3) }"
+    ],
+    "prefix": [
+      "ie",
+      "It Enum"
+    ]
+  },
+  "itBelong": {
+    "description": "[Rspec] It Belong",
+    "body": [
+      "it { is_expected.to belong_to(:$1) }"
+    ],
+    "prefix": [
+      "ib",
+      "It Belong"
+    ]
+  },
+  "describeValidations": {
+    "description": "[Rspec] Describe Validations",
+    "body": [
+      "describe 'validations' do",
+      "\t$1",
+      "end"
+    ],
+    "prefix": [
+      "dv",
+      "Describe Validations"
+    ]
+  },
+  "itPresence": {
+    "description": "[Rspec] It Presence",
+    "body": [
+      "it { is_expected.to validate_presence_of(:$1) }"
+    ],
+    "prefix": [
+      "ip",
+      "It Presence"
+    ]
+  },
+  "itHasMany": {
+    "description": "[Rspec] It Has Many",
+    "body": [
+      "it { is_expected.to have_many(:$1) }"
+    ],
+    "prefix": [
+      "ihm",
+      "It Has Many"
+    ]
+  },
+  "describeAssociations": {
+    "description": "[Rspec] Describe Associations",
+    "body": [
+      "describe 'associations' do",
+      "\t$1",
+      "end"
+    ],
+    "prefix": [
+      "da",
+      "Describe Associations"
+    ]
+  },
+  "itHasOne": {
+    "description": "[Rspec] It Has One",
+    "body": [
+      "it { is_expected.to have_one(:$1) }"
+    ],
+    "prefix": [
+      "iho",
+      "It Has One"
+    ]
+  },
+  "describeEnums": {
+    "description": "[Rspec] Describe Enums",
+    "body": [
+      "describe 'enums' do",
+      "\t$1",
+      "end"
+    ],
+    "prefix": [
+      "de",
+      "Describe Enums"
+    ]
+  }
+}

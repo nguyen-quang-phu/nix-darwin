@@ -1,0 +1,32 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./snippets.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./rails.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./rspec.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./vue.json"
+      }
+    ]
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "name": "harvey snippets"
+}

@@ -1,0 +1,13 @@
+{
+  "enum": {
+    "prefix": [
+      "enum"
+    ],
+    "body": [
+      "enum $1: {",
+      "$2",
+      "}, _suffix: true"
+    ],
+    "description": "Enum"
+  }
+}

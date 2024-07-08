@@ -1,0 +1,29 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+  cwd "~/Code/GO/GIGADMIN/"
+  tab name="Deploy" focus=true {
+    pane split_direction="vertical" {
+      pane split_direction="horizontal" {
+        pane name="Deploy GIGADMIN Backend"{
+          cwd "gigadmin-api"
+        } 
+        pane name="Deploy GIGADMIN Frontend"{
+          cwd "gigadmin-frontend"
+        } 
+      }
+      pane split_direction="horizontal" {
+        pane name="Deploy GIGPROVIDER Backend"{
+          cwd "api"
+        } 
+        pane name="Deploy GIGPROVIDER Frontend"{
+          cwd "provider-web-react"
+        } 
+      }
+    }
+  }
+}

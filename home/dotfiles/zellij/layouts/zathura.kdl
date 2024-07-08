@@ -1,0 +1,14 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+  tab name="Zathura" focus=true {
+    pane split_direction="horizontal" focus=true {
+      pane command="zathura" borderless=true{
+      }
+    }
+  }
+}

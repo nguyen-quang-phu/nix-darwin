@@ -1,0 +1,46 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/GO/GIGADMIN"
+  tab name="1. GIGADMIN Backend" cwd="sean/gigadmin-api"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="70%"{
+        args "Gemfile"
+      }
+      pane split_direction="horizontal" size="30%" {
+        pane name="Rails server"
+        pane name="Rails console"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="2. GIGADMIN Frontend" cwd="harvey/gigadmin-frontend"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="70%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="30%" {
+        pane name="React Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="3. GIGPROVIDER Backend" cwd="troy/api"{
+    pane split_direction="vertical"{
+    pane command="nvim" size="70%" {
+      args "package.json"
+    }
+      pane split_direction="horizontal" size="30%" {
+        pane name="Laravel Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

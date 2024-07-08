@@ -15,17 +15,6 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home = {
-    file = {
-      ".config/alacritty/alacritty.toml" = {
-        source = ./dotfiles/alacritty/alacritty.toml;
-      };
-      ".config/alacritty/catppuccin-macchiato.toml" = {
-        source = ./dotfiles/alacritty/catppuccin-macchiato.toml;
-      };
-    };
-  };
-
-  home = {
     inherit username;
     homeDirectory = "/Users/${username}";
 
@@ -38,6 +27,17 @@
     # the Home Manager release notes for a list of state version
     # changes in each release.
     stateVersion = "24.05";
+    file = {
+      ".config/alacritty" = {
+        source = ./dotfiles/alacritty;
+      };
+      ".config/zellij" = {
+        source = ./dotfiles/zellij;
+      };
+      ".config/nvim" = {
+        source = ./dotfiles/nvim;
+      };
+    };
   };
   # Let Home Manager install and manage itself.
   programs = {

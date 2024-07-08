@@ -1,0 +1,30 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/.config"
+  tab name="Config" focus=true {
+    pane split_direction="vertical" {
+      pane split_direction="horizontal" {
+        pane name="Nvim" cwd="nvim" command="nvim"{
+          args "init.lua"
+        } 
+        pane name="Zellij" cwd="zellij" command="nvim"{
+          args "config.kdl"
+        } 
+      }
+      pane split_direction="horizontal" {
+        pane name="Nix-Darwin" cwd="nix-darwin" command="nvim"{
+          args "flake.nix"
+        } 
+        pane name="Terminal"{
+          cwd "~"
+        } 
+      }
+    }
+  }
+}
