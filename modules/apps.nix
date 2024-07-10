@@ -21,7 +21,6 @@
     just # https://github.com/casey/just
     nil # https://github.com/oxalica/nil
     nix-prefetch-scripts
-    raycast
     devenv
     glab
     ripgrep
@@ -29,6 +28,13 @@
     statix
     codespell
     coreutils
+    
+    maccy
+    rectangle
+    postman
+    ngrok
+    spotify
+    slack
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -68,7 +74,11 @@
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
-      # "google-chrome"
+      "amazon-q"
+      "aerospace"
+      "cloudflare-warp"
+      "raycast"
+      "karabiner-elements"
     ];
 
     masApps = {};

@@ -40,6 +40,12 @@
       ".config/yazi" = {
         source = ./dotfiles/yazi;
       };
+      ".config/raycast" = {
+        source = ./dotfiles/raycast;
+      };
+      ".config/karabiner" = {
+        source = ./dotfiles/karabiner;
+      };
     };
   };
   # Let Home Manager install and manage itself.
