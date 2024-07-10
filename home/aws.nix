@@ -1,0 +1,7 @@
+{...}: {
+  programs = {
+    awscli = {
+      enable = true;
+    };
+  };
+}

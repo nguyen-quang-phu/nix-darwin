@@ -22,6 +22,13 @@
     nil # https://github.com/oxalica/nil
     nix-prefetch-scripts
     raycast
+    devenv
+    glab
+    ripgrep
+    awsebcli
+    statix
+    codespell
+    coreutils
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -39,7 +46,7 @@
     onActivation = {
       autoUpdate = false;
       # 'zap': uninstalls all formulae(and related files) not listed here.
-      # cleanup = "zap";
+      cleanup = "zap";
     };
 
     taps = [

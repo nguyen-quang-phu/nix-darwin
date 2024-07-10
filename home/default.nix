@@ -2,9 +2,9 @@
   # import sub modules
   imports = [
     ./alacritty.nix
-    ./bat.nix
+    ./aws.nix
+    ./cli.nix
     ./core.nix
-    ./fzf.nix
     ./git.nix
     ./neovim.nix
     ./starship.nix
@@ -36,6 +36,9 @@
       };
       ".config/nvim" = {
         source = ./dotfiles/nvim;
+      };
+      ".config/yazi" = {
+        source = ./dotfiles/yazi;
       };
     };
   };
