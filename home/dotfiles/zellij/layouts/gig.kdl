@@ -9,10 +9,10 @@ layout {
   cwd "~/Code/GO/GIGADMIN"
   tab name="1. GIGADMIN Backend" cwd="sean/gigadmin-api"{
     pane split_direction="vertical" {
-      pane command="nvim" size="70%"{
+      pane command="nvim" size="65%"{
         args "Gemfile"
       }
-      pane split_direction="horizontal" size="30%" {
+      pane split_direction="horizontal" size="35%" {
         pane name="Rails server"
         pane name="Rails console"
         pane focus=true name="Terminal"
@@ -22,10 +22,10 @@ layout {
 
   tab name="2. GIGADMIN Frontend" cwd="harvey/gigadmin-frontend"{
     pane split_direction="vertical"{
-      pane command="nvim" size="70%" {
+      pane command="nvim" size="65%" {
         args "package.json"
       }
-      pane split_direction="horizontal" size="30%" {
+      pane split_direction="horizontal" size="35%" {
         pane name="React Server"
         pane focus=true name="Terminal"
       }
@@ -34,10 +34,10 @@ layout {
 
   tab name="3. GIGPROVIDER Backend" cwd="troy/api"{
     pane split_direction="vertical"{
-    pane command="nvim" size="70%" {
+    pane command="nvim" size="65%" {
       args "package.json"
     }
-      pane split_direction="horizontal" size="30%" {
+      pane split_direction="horizontal" size="35%" {
         pane name="Laravel Server"
         pane focus=true name="Terminal"
       }

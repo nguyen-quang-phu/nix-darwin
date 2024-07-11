@@ -56,6 +56,9 @@
       ".config/zellij" = {
         source = ./dotfiles/zellij;
       };
+      ".config/spicetify" = {
+        source = ./dotfiles/spicetify;
+      };
     };
 
     shellAliases = {

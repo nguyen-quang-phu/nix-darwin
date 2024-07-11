@@ -30,7 +30,6 @@
     rectangle
     ripgrep
     slack
-    spotify
     statix
     yaml-language-server
   ];
@@ -49,8 +48,13 @@
 
     onActivation = {
       autoUpdate = true;
+      upgrade = true;
       # 'zap': uninstalls all formulae(and related files) not listed here.
       cleanup = "zap";
+    };
+    caskArgs = {
+      no_quarantine = true;
+      require_sha = false;
     };
 
     taps = [
@@ -63,6 +67,7 @@
       "coreutils"
       "ruby-build"
       "imagemagick"
+      "spicetify-cli"
       {
         name = "mysql@8.0";
         restart_service = true;
@@ -84,7 +89,7 @@
       "karabiner-elements"
       "meld"
       "raycast"
-      "jordanbaird-ice"
+      "spotify"
     ];
 
     masApps = {
