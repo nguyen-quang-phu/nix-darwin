@@ -29,7 +29,7 @@
     username = "harvey";
     system = "x86_64-darwin"; # aarch64-darwin or x86_64-darwin
     hostname = "harvey";
-    useremail = "nqphu1998@gmail.com";
+    useremail = "nqphu1998" + "@" + "gmail" + "." + "com";
     specialArgs =
       inputs
       // {

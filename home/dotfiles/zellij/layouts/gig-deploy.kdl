@@ -10,18 +10,18 @@ layout {
     pane split_direction="vertical" {
       pane split_direction="horizontal" {
         pane name="Deploy GIGADMIN Backend"{
-          cwd "gigadmin-api"
+          cwd "sean/gigadmin-api"
         } 
         pane name="Deploy GIGADMIN Frontend"{
-          cwd "gigadmin-frontend"
+          cwd "harvey/gigadmin-frontend"
         } 
       }
       pane split_direction="horizontal" {
         pane name="Deploy GIGPROVIDER Backend"{
-          cwd "api"
+          cwd "troy/api"
         } 
         pane name="Deploy GIGPROVIDER Frontend"{
-          cwd "provider-web-react"
+          cwd "troy/provider-web-react"
         } 
       }
     }

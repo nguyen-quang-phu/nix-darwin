@@ -52,9 +52,6 @@
     gh = {
       enable = true;
     };
-    zathura = {
-      enable = true;
-    };
     yazi = {
       enable = true;
       enableZshIntegration = true;

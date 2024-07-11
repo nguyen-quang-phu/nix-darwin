@@ -32,6 +32,7 @@
     slack
     spotify
     statix
+    yaml-language-server
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -53,17 +54,15 @@
     };
 
     taps = [
-      "nikitabobko/tap"
+      "nikitabobko/tap" # aerospace
     ];
 
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
-      # "gmp"
       "coreutils"
       "ruby-build"
       "imagemagick"
-
       {
         name = "mysql@8.0";
         restart_service = true;
@@ -83,7 +82,9 @@
       "cloudflare-warp"
       "evkey"
       "karabiner-elements"
+      "meld"
       "raycast"
+      "jordanbaird-ice"
     ];
 
     masApps = {

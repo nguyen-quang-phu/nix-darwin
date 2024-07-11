@@ -8,6 +8,7 @@
     ./git.nix
     ./neovim.nix
     ./starship.nix
+    ./zathura.nix
     ./zellij.nix
     ./zsh.nix
   ];
@@ -60,6 +61,7 @@
     shellAliases = {
       "..." = "cd ../..";
       "ze" = "zellij";
+      "nix-darwin-build" = "just -f ~/.config/nix-darwin/justfile build";
     };
   };
   # Let Home Manager install and manage itself.
