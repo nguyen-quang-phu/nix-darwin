@@ -28,24 +28,38 @@
     # changes in each release.
     stateVersion = "24.05";
     file = {
+      ".config/aerospace" = {
+        source = ./dotfiles/aerospace;
+      };
       ".config/alacritty" = {
         source = ./dotfiles/alacritty;
       };
-      ".config/zellij" = {
-        source = ./dotfiles/zellij;
-      };
-      ".config/nvim" = {
-        source = ./dotfiles/nvim;
-      };
-      ".config/yazi" = {
-        source = ./dotfiles/yazi;
-      };
-      ".config/raycast" = {
-        source = ./dotfiles/raycast;
+      ".config/bat" = {
+        source = ./dotfiles/bat;
       };
       ".config/karabiner" = {
         source = ./dotfiles/karabiner;
       };
+      ".config/nvim" = {
+        source = ./dotfiles/nvim;
+      };
+      ".config/raycast" = {
+        source = ./dotfiles/raycast;
+      };
+      ".config/yazi" = {
+        source = ./dotfiles/yazi;
+      };
+      ".config/zathura" = {
+        source = ./dotfiles/zathura;
+      };
+      ".config/zellij" = {
+        source = ./dotfiles/zellij;
+      };
+    };
+
+    shellAliases = {
+      "..." = "cd ../..";
+      "ze" = "zellij";
     };
   };
   # Let Home Manager install and manage itself.

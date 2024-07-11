@@ -53,15 +53,17 @@
     };
 
     taps = [
+      "nikitabobko/tap"
     ];
 
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
-      "gmp"
+      # "gmp"
+      "coreutils"
       "ruby-build"
       "imagemagick"
-      "coreutils"
+
       {
         name = "mysql@8.0";
         restart_service = true;
@@ -79,6 +81,7 @@
       "amazon-q"
       "arc"
       "cloudflare-warp"
+      "evkey"
       "karabiner-elements"
       "raycast"
     ];
