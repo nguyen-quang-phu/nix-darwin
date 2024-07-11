@@ -17,24 +17,21 @@
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
-    git # https://github.com/git/git
-    just # https://github.com/casey/just
-    nil # https://github.com/oxalica/nil
-    nix-prefetch-scripts
+    awsebcli
+    codespell
     devenv
     glab
-    ripgrep
-    awsebcli
-    statix
-    codespell
-    coreutils
-    
+    just # https://github.com/casey/just
     maccy
-    rectangle
-    postman
     ngrok
-    spotify
+    nil # https://github.com/oxalica/nil
+    nix-prefetch-scripts
+    postman
+    rectangle
+    ripgrep
     slack
+    spotify
+    statix
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -50,7 +47,7 @@
     global.brewfile = true;
 
     onActivation = {
-      autoUpdate = false;
+      autoUpdate = true;
       # 'zap': uninstalls all formulae(and related files) not listed here.
       cleanup = "zap";
     };
@@ -61,6 +58,10 @@
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
+      "gmp"
+      "ruby-build"
+      "imagemagick"
+      "coreutils"
       {
         name = "mysql@8.0";
         restart_service = true;
@@ -74,13 +75,16 @@
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
-      "amazon-q"
       "aerospace"
+      "amazon-q"
+      "arc"
       "cloudflare-warp"
-      "raycast"
       "karabiner-elements"
+      "raycast"
     ];
 
-    masApps = {};
+    masApps = {
+      "Xcode" = 497799835;
+    };
   };
 }

@@ -27,6 +27,10 @@
       enable = true;
       enableZshIntegration = true;
     };
+    rbenv = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     jq = {
       enable = true;
     };
