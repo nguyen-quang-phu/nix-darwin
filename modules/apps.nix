@@ -68,6 +68,7 @@
       "ruby-build"
       "imagemagick"
       "spicetify-cli"
+      "spotify_player"
       {
         name = "mysql@8.0";
         restart_service = true;

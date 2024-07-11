@@ -59,6 +59,9 @@
       ".config/spicetify" = {
         source = ./dotfiles/spicetify;
       };
+      ".config/spotify-player" = {
+        source = ./dotfiles/spotify-player;
+      };
     };
 
     shellAliases = {
