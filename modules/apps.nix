@@ -33,6 +33,7 @@
     slack
     statix
     yaml-language-server
+    luajitPackages.luacheck
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
