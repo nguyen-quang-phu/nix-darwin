@@ -13,9 +13,13 @@ layout {
         args "Gemfile"
       }
       pane split_direction="horizontal" size="35%" {
-        pane name="Rails server"
-        pane name="Rails console"
         pane name="Ngrok"
+        pane name="Rails server" command="rails" {
+          args "server"
+        }
+        pane name="Rails console" command="rails" {
+          args "console"
+        }
         pane focus=true name="Terminal"
       }
     }

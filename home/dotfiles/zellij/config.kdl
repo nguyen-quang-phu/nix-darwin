@@ -1,13 +1,7 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
   normal clear-defaults=true {
-    // uncomment this and adjust key if using copy_on_select=false
-    // bind "Alt c" { Copy; }
-    // unbind "Ctrl b"
-    bind "Ctrl x" { SwitchToMode "Tmux"; }
-
-    bind "Ctrl 1" {GoToTab 1;}
-    bind "Ctrl 2" {GoToTab 2;}
+    bind "Ctrl b" { SwitchToMode "Tmux"; }
   }
   locked {
     bind "Ctrl g" { SwitchToMode "Normal"; }

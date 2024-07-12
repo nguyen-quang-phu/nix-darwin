@@ -70,6 +70,7 @@
       "imagemagick"
       "spicetify-cli"
       "spotify_player"
+      "gnu-sed"
       {
         name = "mysql@8.0";
         restart_service = true;
