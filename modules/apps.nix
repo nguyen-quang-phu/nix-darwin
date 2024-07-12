@@ -22,6 +22,7 @@
     devenv
     glab
     just # https://github.com/casey/just
+    macchina
     maccy
     ngrok
     nil # https://github.com/oxalica/nil

@@ -50,9 +50,6 @@
       ".config/yazi" = {
         source = ./dotfiles/yazi;
       };
-      ".config/zathura" = {
-        source = ./dotfiles/zathura;
-      };
       ".config/zellij" = {
         source = ./dotfiles/zellij;
       };
@@ -61,6 +58,9 @@
       };
       ".config/spotify-player" = {
         source = ./dotfiles/spotify-player;
+      };
+      ".config/macchina" = {
+        source = ./dotfiles/macchina;
       };
     };
 
