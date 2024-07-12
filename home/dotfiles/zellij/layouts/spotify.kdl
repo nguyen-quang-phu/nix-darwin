@@ -6,6 +6,6 @@ layout {
     }
   }
   tab name="Spotify" focus=true {
-    pane command="spt" borderless=true
+    pane command="spotify_player" borderless=true
   }
 }

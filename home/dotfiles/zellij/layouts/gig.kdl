@@ -15,6 +15,7 @@ layout {
       pane split_direction="horizontal" size="35%" {
         pane name="Rails server"
         pane name="Rails console"
+        pane name="Ngrok"
         pane focus=true name="Terminal"
       }
     }
