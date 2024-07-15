@@ -27,6 +27,10 @@
       enable = true;
       enableZshIntegration = true;
     };
+    vscode = {
+      enable = true;
+      extensions= [];
+    };
     rbenv = {
       enable = true;
       enableZshIntegration = true;

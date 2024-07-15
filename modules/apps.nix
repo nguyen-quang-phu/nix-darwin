@@ -18,24 +18,31 @@
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPackages = with pkgs; [
     awsebcli
+    clipboard-jh
     codespell
     devenv
+    devpod
     glab
+    go
+    graphviz
     just # https://github.com/casey/just
+    luajitPackages.luacheck
     macchina
     maccy
     ngrok
     nil # https://github.com/oxalica/nil
     nix-prefetch-scripts
+    nodePackages.yarn
+    nodejs_22
     postman
     rectangle
     ripgrep
+    rustup
     slack
     statix
+    tldr
+    wget
     yaml-language-server
-    luajitPackages.luacheck
-    nodejs_22
-    nodePackages.yarn
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -92,6 +99,7 @@
       "arc"
       "cloudflare-warp"
       "evkey"
+      "google-chrome"
       "karabiner-elements"
       "meld"
       "raycast"

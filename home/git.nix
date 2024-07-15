@@ -171,7 +171,7 @@
           }
           {
             key = "n";
-            command = "npx better-branch";
+            command = "npx -p better-commits better-branch";
             description = "new branch with better-branch";
             context = "localBranches";
             loadingText = "opening better-branch tool";
