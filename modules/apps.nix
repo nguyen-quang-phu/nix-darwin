@@ -34,6 +34,8 @@
     statix
     yaml-language-server
     luajitPackages.luacheck
+    nodejs_22
+    nodePackages.yarn
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [

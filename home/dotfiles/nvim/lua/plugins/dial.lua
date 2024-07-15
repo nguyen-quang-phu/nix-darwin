@@ -62,7 +62,7 @@ return {
           "Sunday",
         },
         word = true,
-        cyclic = true,
+        cyclic = false,
       })
 
       local months = augend.constant.new({
@@ -81,7 +81,7 @@ return {
           "December",
         },
         word = true,
-        cyclic = true,
+        cyclic = false,
       })
 
       local capitalized_boolean = augend.constant.new({

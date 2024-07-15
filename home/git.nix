@@ -131,6 +131,7 @@
         name = "config --local user.name";
 
         br = "rev-parse --abbrev-ref HEAD";
+        can = "commit --amend --reset-author --no-edit";
         colast = "checkout -";
         fsck = "fsck --unreachable | grep commit | cut -d' ' -f3 | xargs git log --merges --no-walk --grep=WIP";
         hide = "update-index --skip-worktree";
@@ -155,6 +156,29 @@
 
     lazygit = {
       enable = true;
+      settings = {
+        os = {
+          editPreset = "nvim";
+        };
+        customCommands = [
+          {
+            key = "c";
+            command = "npx better-commits";
+            description = "commit with better-commits";
+            context = "files";
+            loadingText = "opening better-commits tool";
+            subprocess = true;
+          }
+          {
+            key = "n";
+            command = "npx better-branch";
+            description = "new branch with better-branch";
+            context = "localBranches";
+            loadingText = "opening better-branch tool";
+            subprocess = true;
+          }
+        ];
+      };
     };
   };
 }
