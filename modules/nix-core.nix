@@ -4,8 +4,11 @@
   ...
 }: {
   nixpkgs = {
-    config.allowUnfree = true;
-    config.allowUnsupportedSystem = true;
+    config = {
+      allowUnfree = true;
+      allowUnsupportedSystem = true;
+      allowBroken = true;
+    };
   };
 
   nix = {

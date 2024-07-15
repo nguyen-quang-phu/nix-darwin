@@ -69,6 +69,7 @@
     };
 
     taps = [
+      "homebrew/services"
       "nikitabobko/tap" # aerospace
     ];
 
