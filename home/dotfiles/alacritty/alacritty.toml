@@ -61,6 +61,11 @@ chars = "\u00029"
 key = "Key9"
 mods = "Command"
 
+[[keyboard.bindings]]
+chars = "\u0002c"
+key = "T"
+mods = "Command"
+
 # [[keyboard.bindings]]
 # chars = "\u001BOH"
 # key = "Home"

@@ -15,7 +15,7 @@ keybinds {
     bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
     bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
     bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
-    bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+    bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
   }
   move {
     bind "Ctrl h" { SwitchToMode "Normal"; }
@@ -129,6 +129,7 @@ keybinds {
     bind "9" {GoToTab 9; SwitchToMode "Normal";}
     bind "m" {SwitchToMode "Move";}
     bind "e" { SwitchToMode "Scroll"; EditScrollback; SwitchToMode "Normal";}
+    bind "p" { SwitchToMode "Pane"; }
   }
   shared_except "locked" {
     bind "Ctrl g" { SwitchToMode "Locked"; }

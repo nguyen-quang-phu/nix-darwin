@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  inputs,
+  username,
+  ...
+}: {
   # import sub modules
   imports = [
     ./alacritty.nix
@@ -67,6 +71,7 @@
     shellAliases = {
       "..." = "cd ../..";
       "ze" = "zellij";
+      "zed" = "ze a -c default";
       "nix-darwin-build" = "just -f ~/.config/nix-darwin/justfile build";
     };
   };
