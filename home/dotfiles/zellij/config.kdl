@@ -130,6 +130,7 @@ keybinds {
     bind "m" {SwitchToMode "Move";}
     bind "e" { SwitchToMode "Scroll"; EditScrollback; SwitchToMode "Normal";}
     bind "p" { SwitchToMode "Pane"; }
+    bind "t" { SwitchToMode "Tab"; }
   }
   shared_except "locked" {
     bind "Ctrl g" { SwitchToMode "Locked"; }
