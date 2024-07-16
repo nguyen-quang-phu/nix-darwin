@@ -30,7 +30,7 @@
     macchina
     maccy
     ngrok
-    nil # https://github.com/oxalica/nil
+    nixd
     nix-prefetch-scripts
     nodePackages.yarn
     nodejs_22

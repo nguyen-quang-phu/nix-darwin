@@ -214,7 +214,11 @@ return {
         yamlls = {
           mason = false,
         },
+        nixd = {
+          mason = false,
+        },
         nil_ls = {
+          enabled = false,
           mason = false,
         },
         ---@type lspconfig.options.standardrb
