@@ -25,13 +25,14 @@
     glab
     go
     graphviz
-    just # https://github.com/casey/just
+    just
+    lazysql
     luajitPackages.luacheck
     macchina
     maccy
     ngrok
-    nixd
     nix-prefetch-scripts
+    nixd
     nodePackages.yarn
     nodejs_22
     postman

@@ -158,7 +158,8 @@
       enable = true;
       settings = {
         os = {
-          editPreset = "nvim";
+          editPreset = "nvim-remote";
+          openLink= "open \"$(echo \"{{link}}\" | sed 's/%2F/\\//g')\"";
         };
         customCommands = [
           {
