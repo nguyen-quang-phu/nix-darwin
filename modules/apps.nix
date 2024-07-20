@@ -23,27 +23,39 @@
     devenv
     devpod
     glab
-    go
     graphviz
     just
     lazysql
-    luajitPackages.luacheck
     macchina
     maccy
+    mycli
+    nap
     ngrok
     nix-prefetch-scripts
-    nixd
-    nodePackages.yarn
-    nodejs_22
+    pgcli
     postman
     rectangle
     ripgrep
-    rustup
     slack
-    statix
     tldr
     wget
     yaml-language-server
+    # nix
+    nixd
+    statix
+
+    # lua
+    luajitPackages.luacheck
+
+    # rust
+    rustup
+
+    #node
+    nodePackages.yarn
+    nodejs_22
+
+    # go
+    go
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
