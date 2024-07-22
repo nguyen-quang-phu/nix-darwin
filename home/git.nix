@@ -110,6 +110,12 @@
         transfer.fsckObjects = true;
         fetch.fsckObjects = true;
         receive.fsckObjects = true;
+        url = {
+          "git@github.com:".insteadOf = "https://github.com/";
+          # "ssh://git@github.com".pushInsteadOf = "gh:";
+          "git@gitlab.com:".insteadOf = "https://gitlab.com/";
+          # "ssh://git@gitlab.com".pushInsteadOf = "gl:";
+        };
       };
 
       # signing = {
@@ -159,7 +165,7 @@
       settings = {
         os = {
           editPreset = "nvim-remote";
-          openLink= "open \"$(echo \"{{link}}\" | sed 's/%2F/\\//g')\"";
+          openLink = "open \"$(echo \"{{link}}\" | sed 's/%2F/\\//g')\"";
         };
         customCommands = [
           {

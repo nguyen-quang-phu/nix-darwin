@@ -66,6 +66,18 @@ chars = "\u0002c"
 key = "T"
 mods = "Command"
 
+[[keyboard.bindings]]
+chars = "\u001Bj"
+key = "J"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bk"
+key = "K"
+mods = "Alt"
+
+#
+#
 # [[keyboard.bindings]]
 # chars = "\u001BOH"
 # key = "Home"
@@ -164,12 +176,12 @@ mods = "Command"
 # chars = "\u0000"
 # key = "Space"
 # mods = "Alt"
-
+#
 # [[keyboard.bindings]]
 # chars = "\u0000"
 # key = "Space"
 # mods = "Command"
-
+#
 # [[keyboard.bindings]]
 # chars = "\u0002)"
 # key = "N"
@@ -429,15 +441,6 @@ mods = "Command"
 # key = "I"
 # mods = "Shift|Command"
 #
-# [[keyboard.bindings]]
-# chars = "\u001Bj"
-# key = "J"
-# mods = "Alt"
-#
-# [[keyboard.bindings]]
-# chars = "\u001Bk"
-# key = "K"
-# mods = "Alt"
 #
 # [[keyboard.bindings]]
 # chars = "\u001Bh"
