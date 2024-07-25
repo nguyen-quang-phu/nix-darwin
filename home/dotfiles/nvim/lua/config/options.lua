@@ -14,8 +14,8 @@ vim.opt.wrap = true
 
 vim.filetype.add({
   extension = {
-    yml = 'yaml'
-  }
+    yml = "yaml",
+  },
 })
 vim.g.lazyvim_ruby_lsp = "solargraph"
 vim.g.lazyvim_ruby_formatter = "rubocop"

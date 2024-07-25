@@ -56,6 +56,8 @@
 
     # go
     go
+    comma
+    openssl
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -95,6 +97,7 @@
       "spicetify-cli"
       "spotify_player"
       "gnu-sed"
+      "whalebrew"
       {
         name = "mysql@8.0";
         restart_service = true;
