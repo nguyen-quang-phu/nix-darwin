@@ -29,7 +29,7 @@
     };
     vscode = {
       enable = true;
-      extensions= [];
+      extensions = [];
     };
     rbenv = {
       enable = true;

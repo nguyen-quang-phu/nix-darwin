@@ -5,13 +5,13 @@
 }: {
   # import sub modules
   imports = [
-    ./alacritty.nix
     ./aws.nix
     ./cli.nix
     ./core.nix
     ./git.nix
     ./neovim.nix
     ./starship.nix
+    ./terminal.nix
     ./zathura.nix
     ./zellij.nix
     ./zsh.nix
@@ -36,9 +36,9 @@
       ".config/aerospace" = {
         source = ./dotfiles/aerospace;
       };
-      ".config/alacritty" = {
-        source = ./dotfiles/alacritty;
-      };
+      # ".config/alacritty" = {
+      #   source = ./dotfiles/alacritty;
+      # };
       ".config/bat" = {
         source = ./dotfiles/bat;
       };

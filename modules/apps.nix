@@ -121,6 +121,7 @@
       "meld"
       "raycast"
       "spotify"
+      "android-studio"
     ];
 
     masApps = {
