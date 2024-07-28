@@ -72,5 +72,9 @@
       enable = true;
       enableZshIntegration = true;
     };
+    pyenv = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 }

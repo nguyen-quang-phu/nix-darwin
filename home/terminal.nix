@@ -40,6 +40,11 @@ _: {
       macos_option_as_alt = true;
       scrollback_lines = -1;
       strip_trailing_spaces = "always";
+      startup_session = "./startup.conf";
+      allow_remote_control = "socket-only";
+      listen_on = "unix:/tmp/kitty";
     };
   };
+    xdg.configFile."kitty/startup.conf".source = ./dotfiles/kitty/startup.conf;
+
 }
