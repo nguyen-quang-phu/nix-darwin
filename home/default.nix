@@ -45,9 +45,6 @@
       ".config/karabiner" = {
         source = ./dotfiles/karabiner;
       };
-      ".config/nvim" = {
-        source = ./dotfiles/nvim;
-      };
       ".config/raycast" = {
         source = ./dotfiles/raycast;
       };

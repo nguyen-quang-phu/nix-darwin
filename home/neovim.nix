@@ -8,6 +8,9 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-
+  };
+  xdg.configFile.nvim.source = ./dotfiles/nvim;
+  home.sessionVariables = {
+    EDITOR = "nvim";
   };
 }

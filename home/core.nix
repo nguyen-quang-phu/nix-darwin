@@ -6,6 +6,5 @@
   home.sessionVariables = {
     PAGER = "less";
     CLICOLORS = 1;
-    EDITOR = "vim";
   };
 }

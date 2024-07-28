@@ -86,6 +86,7 @@
     taps = [
       "homebrew/services"
       "nikitabobko/tap" # aerospace
+      "chase/tap"
     ];
 
     # `brew install`
@@ -98,6 +99,7 @@
       "spotify_player"
       "gnu-sed"
       "whalebrew"
+      "awrit"
       {
         name = "mysql@8.0";
         restart_service = true;

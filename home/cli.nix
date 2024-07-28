@@ -49,9 +49,21 @@
     eza = {
       enable = true;
       enableZshIntegration = true;
+      git = true;
+      icons = true;
+      extraOptions = [
+        "--group-directories-first"
+        "--header"
+      ];
     };
     fd = {
       enable = true;
+      ignores = [
+        "*.bak"
+        ".git/"
+        "node_modules/"
+        "vendor/"
+      ];
     };
     gh = {
       enable = true;
