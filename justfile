@@ -5,7 +5,9 @@ default:
 
 git-add:
   git add .
-
+update:
+  nix flake update
+  @just build
 build:
   @just git-add
   darwin-rebuild switch --flake {{config-file}}

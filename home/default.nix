@@ -70,6 +70,7 @@
       "ze" = "zellij";
       "zed" = "ze a -c default";
       "nix-darwin-build" = "just -f ~/.config/nix-darwin/justfile build";
+      "nix-darwin-update" = "just -f ~/.config/nix-darwin/justfile update";
     };
   };
   # Let Home Manager install and manage itself.

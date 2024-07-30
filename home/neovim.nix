@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.neovim = {
     enable = true;
-    withNodeJs = true;
+    # withNodeJs = true;
     # withRuby = true;
     # withPython3 = true;
 

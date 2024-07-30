@@ -9,3 +9,4 @@ function zet() {
     else
     fi
 }
+eval "$(fnm env --use-on-cd)"

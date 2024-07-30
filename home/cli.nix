@@ -29,7 +29,12 @@
     };
     vscode = {
       enable = true;
-      extensions = [];
+      extensions = with pkgs.vscode-extensions; [
+        eamodio.gitlens
+        catppuccin.catppuccin-vsc-icons
+        catppuccin.catppuccin-vsc
+      ];
+      mutableExtensionsDir = false;
     };
     rbenv = {
       enable = true;

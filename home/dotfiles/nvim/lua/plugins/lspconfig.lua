@@ -207,7 +207,7 @@ return {
           settings = {
             solargraph = {
               diagnostics = false,
-              useBundler = true,
+              useBundler = false,
             },
           },
         },

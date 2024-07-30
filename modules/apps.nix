@@ -23,7 +23,7 @@
     devenv
     devpod
     glab
-    graphviz
+    # graphviz
     just
     lazysql
     macchina
@@ -58,6 +58,12 @@
     go
     comma
     openssl
+    gitlab-ci-local
+    fnm
+    vscode-extensions.xdebug.php-debug
+    php81Extensions.xdebug
+
+    rubyPackages.solargraph
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -94,7 +100,7 @@
     brews = [
       "coreutils"
       "ruby-build"
-      "imagemagick"
+      # "imagemagick"
       "spicetify-cli"
       "spotify_player"
       "gnu-sed"
