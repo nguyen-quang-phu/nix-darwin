@@ -1,8 +1,4 @@
 _: {
-  programs.alacritty = {
-    enable = false;
-  };
-  xdg.configFile."alacritty".source = ./dotfiles/alacritty;
   programs.kitty = {
     enable = true;
     extraConfig = "";

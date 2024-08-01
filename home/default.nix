@@ -36,9 +36,6 @@
       ".config/aerospace" = {
         source = ./dotfiles/aerospace;
       };
-      # ".config/alacritty" = {
-      #   source = ./dotfiles/alacritty;
-      # };
       ".config/bat" = {
         source = ./dotfiles/bat;
       };
