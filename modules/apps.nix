@@ -42,6 +42,7 @@
     yaml-language-server
     # nix
     nixd
+    nil
     statix
 
     # lua
@@ -64,6 +65,7 @@
     php81Extensions.xdebug
 
     rubyPackages.solargraph
+    cachix
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -100,7 +102,7 @@
     brews = [
       "coreutils"
       "ruby-build"
-      # "imagemagick"
+      "imagemagick"
       "spicetify-cli"
       "spotify_player"
       "gnu-sed"

@@ -24,6 +24,7 @@ _: {
       "cmd+k" = "send_text all \\x02k";
       "cmd+l" = "send_text all \\x02l";
       "cmd+t" = "send_text all \\x02c";
+      "cmd+shift+t" = "send_text all \\x02pw";
     };
 
     settings = {

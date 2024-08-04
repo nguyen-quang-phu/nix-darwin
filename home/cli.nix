@@ -21,6 +21,7 @@
     direnv = {
       enable = true;
       enableZshIntegration = true;
+      enableNushellIntegration = true;
       nix-direnv.enable = true;
     };
     fzf = {
@@ -46,14 +47,17 @@
     zoxide = {
       enable = true;
       enableZshIntegration = true;
+      enableNushellIntegration = true;
     };
     atuin = {
       enable = true;
       enableZshIntegration = true;
+      enableNushellIntegration = true;
     };
     eza = {
       enable = true;
       enableZshIntegration = true;
+      enableNushellIntegration = true;
       git = true;
       icons = true;
       extraOptions = [
@@ -76,10 +80,17 @@
     yazi = {
       enable = true;
       enableZshIntegration = true;
+      enableNushellIntegration = true;
     };
     pyenv = {
       enable = true;
       enableZshIntegration = true;
+    };
+    aerc = {
+      enable = true;
+    };
+    nushell = {
+      enable = true;
     };
   };
 }
