@@ -1,10 +1,12 @@
 return {
   {
     "chrisgrieser/nvim-scissors",
-    dependencies = "nvim-telescope/telescope.nvim", -- optional
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+    }, -- optional
     opts = {
-      snippetDir = vim.fn.stdpath("config") .. "/lua/snippets",
-      jsonFormatter = "jq"
+      snippetDir = "~/.config/nix-darwin/home/dotfiles/nvim/snippets",
+      jsonFormatter = "jq",
     },
   },
 }

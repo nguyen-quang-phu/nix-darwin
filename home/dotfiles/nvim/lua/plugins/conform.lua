@@ -18,6 +18,7 @@ return {
       timeout_ms = 30000,
     },
     formatters_by_ft = {
+      json = {"jq"},
       nix = { "alejandra" },
       go = { "gofumpt", "goimports-reviser", "golines" },
       ruby = { "rubocop" },

@@ -1,8 +1,26 @@
 return {
-  -- {
-  --   "hrsh7th/nvim-cmp",
-  --   enabled = false,
-  -- },
+  {
+    "hrsh7th/nvim-cmp",
+    ---@param opts cmp.ConfigSchema
+    opts = function(_, opts)
+      local function indexOf(array, value)
+        for i, v in ipairs(array) do
+          if v.name == value then
+            return i
+          end
+        end
+        return nil
+      end
+
+      local index = indexOf(opts.sources, "snippets")
+      if index ~= nil then
+        opts.sources[index] = {
+          name = "snippets",
+          priority = 150,
+        }
+      end
+    end,
+  },
   -- {
   --   "hrsh7th/nvim-cmp",
   --   version = false, -- last release is way too old

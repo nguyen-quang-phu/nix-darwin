@@ -1,0 +1,6 @@
+{
+  "declare description": {
+    "body": "\"description\": \"${1:description}\",",
+    "prefix": "declare description"
+  }
+}

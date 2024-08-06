@@ -1,0 +1,34 @@
+{
+  "Declare Method": {
+    "body": [
+      "def ${1:method_name}",
+      "  $2",
+      "end"
+    ],
+    "description": "Declare Method",
+    "prefix": [
+      "declare method"
+    ]
+  },
+  "Declare Class Method": {
+    "body": [
+      "class << self",
+      "  def ${1:method_name} ",
+      "    $2",
+      "  end",
+      "end"
+    ],
+    "description": "Declare Class Method",
+    "prefix": "declare class method"
+  },
+  "class": {
+    "prefix": "class",
+    "scope": "ruby",
+    "body": [
+      "class ${1:Classname}",
+      "  $2",
+      "end"
+    ],
+    "description": "class"
+  }
+}

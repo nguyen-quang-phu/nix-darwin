@@ -66,6 +66,7 @@
 
     rubyPackages.solargraph
     cachix
+    ueberzugpp
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [

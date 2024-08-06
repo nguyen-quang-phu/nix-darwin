@@ -163,6 +163,11 @@ return {
               word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
               cyclic = true, -- "or" is incremented into "and".
             }),
+            augend.constant.new({
+              elements = { "nil",":".."destroy" },
+              word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+              cyclic = true, -- "or" is incremented into "and".
+            }),
           },
           lua = {
             augend.integer.alias.decimal, -- nonnegative and negative decimal number
