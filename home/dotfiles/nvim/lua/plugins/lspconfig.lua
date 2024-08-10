@@ -199,11 +199,6 @@ return {
         -- },
         ---@type lspconfig.options.solargraph
         solargraph = {
-          mason = false,
-          filetypes = {
-            "ruby",
-            "slim",
-          },
           settings = {
             solargraph = {
               diagnostics = false,
@@ -244,6 +239,9 @@ return {
         nil_ls = {
           mason = false,
         },
+        typos_lsp = {
+          mason = false,
+        },
         ---@type lspconfig.options.standardrb
         -- standardrb = {
         --   mason = false,
@@ -267,3 +265,4 @@ return {
     -- end, }
   },
 }
+

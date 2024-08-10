@@ -12,8 +12,7 @@ return {
   enabled = true,
   opts = {
     linters_by_ft = {
-      ["*"] = { "codespell" },
-       nix = { "statix" },
+      nix = { "statix","deadnix" },
       lua = { "luacheck" },
       ruby = { "rubocop", "reek" },
       eruby = { "erb_lint" },

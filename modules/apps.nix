@@ -67,6 +67,10 @@
     rubyPackages.solargraph
     cachix
     ueberzugpp
+    podman
+    deadnix
+    typos-lsp
+    typos
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [

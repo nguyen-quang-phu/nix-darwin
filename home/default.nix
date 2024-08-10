@@ -10,6 +10,7 @@
     ./core.nix
     ./git.nix
     ./neovim.nix
+    ./ssh.nix
     ./starship.nix
     ./terminal.nix
     ./zathura.nix

@@ -11,6 +11,7 @@
   home.activation.removeExistingGitconfig = lib.hm.dag.entryBefore ["checkLinkTargets"] ''
     rm -f ~/.gitconfig
   '';
+
   programs = {
     git = {
       enable = true;
@@ -62,6 +63,24 @@
             };
           };
         }
+        {
+          condition = "gitdir:~/Code/GO/EZYCAL/zane/";
+          contents = {
+            user = {
+              email = "zane.le.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Zane Le";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/ARINEX/charlie/";
+          contents = {
+            user = {
+              email = "charlie.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Charlie";
+            };
+          };
+        }
       ];
 
       extraConfig = {
@@ -110,12 +129,12 @@
         transfer.fsckObjects = true;
         fetch.fsckObjects = true;
         receive.fsckObjects = true;
-        url = {
-          "git@github.com:".insteadOf = "https://github.com/";
-          # "ssh://git@github.com".pushInsteadOf = "gh:";
-          "git@gitlab.com:".insteadOf = "https://gitlab.com/";
-          # "ssh://git@gitlab.com".pushInsteadOf = "gl:";
-        };
+        # url = {
+        #   "git@github.com:".insteadOf = "https://github.com/";
+        #   # "ssh://git@github.com".pushInsteadOf = "gh:";
+        #   "git@gitlab.com:".insteadOf = "https://gitlab.com/";
+        #   # "ssh://git@gitlab.com".pushInsteadOf = "gl:";
+        # };
       };
 
       # signing = {

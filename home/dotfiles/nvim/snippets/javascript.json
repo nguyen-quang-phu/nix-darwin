@@ -6,5 +6,13 @@
       "}"
     ],
     "prefix": "ifabc"
+  },
+  "lodash sort by order list": {
+    "body": [
+      "    const ${1:ORDER_LIST} = [];",
+      "",
+      "    return sortBy(${2:SORTED_LIST}, ({ ${3:key} }) => $1.indexOf($3));"
+    ],
+    "prefix": "lodash sort by order list"
   }
 }
