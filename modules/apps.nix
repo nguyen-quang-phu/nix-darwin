@@ -16,6 +16,8 @@
   # But on macOS, it's less stable than homebrew.
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
+  environment.systemPath=["/opt/homebrew/bin"];
+  environment.pathsToLink=["/Applications"];
   environment.systemPackages = with pkgs; [
     awsebcli
     clipboard-jh
@@ -34,7 +36,7 @@
     nix-prefetch-scripts
     pgcli
     postman
-    rectangle
+    # rectangle
     ripgrep
     slack
     tldr
@@ -127,20 +129,23 @@
     # TODO Feel free to add your favorite apps here.
     casks = [
       "aerospace"
-      "amazon-q"
+      "alt-tab"
+      "android-studio"
       "arc"
       "cloudflare-warp"
       "evkey"
       "google-chrome"
       "karabiner-elements"
       "meld"
-      "raycast"
+      "numi"
       "spotify"
-      "android-studio"
+      "amazon-q"
+      "raycast"
     ];
 
     masApps = {
       "Xcode" = 497799835;
+      "DropOver"= 1355679052;
     };
   };
 }

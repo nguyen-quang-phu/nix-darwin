@@ -43,9 +43,6 @@
       ".config/karabiner" = {
         source = ./dotfiles/karabiner;
       };
-      ".config/raycast" = {
-        source = ./dotfiles/raycast;
-      };
       ".config/yazi" = {
         source = ./dotfiles/yazi;
       };

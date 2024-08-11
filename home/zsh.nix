@@ -5,6 +5,8 @@
     enableCompletion = true;
     oh-my-zsh.enable = false;
     syntaxHighlighting.enable = true;
-    initExtra = "source ${./dotfiles/zsh/extra.zsh}";
+    initExtra = "
+    source ${./dotfiles/zsh/extra.zsh}
+    ";
   };
 }
