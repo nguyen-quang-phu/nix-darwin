@@ -12,7 +12,7 @@
       github = {
         host = "github.com";
         hostname = "github.com";
-        identityFile = "~/.ssh/id_rsa";
+        identityFile = "~/.ssh/id_rsa_charlie";
       };
       github-charlie = {
         host = "github.com-charlie";

@@ -19,6 +19,7 @@
   environment.systemPath=["/opt/homebrew/bin"];
   environment.pathsToLink=["/Applications"];
   environment.systemPackages = with pkgs; [
+    redis
     awsebcli
     clipboard-jh
     codespell
@@ -73,6 +74,7 @@
     deadnix
     typos-lsp
     typos
+    killport
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -121,7 +123,12 @@
         link = true;
         conflicts_with = ["mysql"];
       }
-
+      {
+        name = "postgresql@14";
+        restart_service = true;
+        link = true;
+        conflicts_with = ["postgresql"];
+      }
       # "aria2"  # download tool
     ];
 

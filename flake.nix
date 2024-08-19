@@ -17,8 +17,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix.url = "github:ryantm/agenix";
-    nix-index-database.url = "github:nix-community/nix-index-database";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     secrets = {
       url = "git+ssh://git@github.com/nguyen-quang-phu/nix-secrets.git";
       flake = false;
@@ -28,6 +34,7 @@
   outputs = inputs @ {
     agenix,
     home-manager,
+    lix-module,
     nix-darwin,
     nix-index-database,
     nixpkgs,
@@ -69,6 +76,8 @@
         nixvim.nixDarwinModules.nixvim
         agenix.darwinModules.default
         nix-index-database.darwinModules.nix-index
+        # This is the important part -- add this line to your module list!
+        lix-module.nixosModules.default
       ];
     };
     # nix code formatter
