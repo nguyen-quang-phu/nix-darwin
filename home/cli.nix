@@ -38,7 +38,7 @@
       mutableExtensionsDir = false;
     };
     rbenv = {
-      enable = false;
+      enable = true;
       enableZshIntegration = true;
     };
     jq = {

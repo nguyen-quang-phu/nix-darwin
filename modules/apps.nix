@@ -119,7 +119,6 @@
       "gnu-sed"
       "whalebrew"
       "awrit"
-      "rbenv"
       {
         name = "mysql@8.0";
         restart_service = true;
