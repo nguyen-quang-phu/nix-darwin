@@ -1,0 +1,29 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/code/GO/EZYCAL"
+  tab name="1. Ezycal" cwd="zane/ezycal"{
+    pane split_direction="vertical" {
+      pane command="nvim" {
+        args "Gemfile"
+      }
+    }
+  }
+
+  tab name="2. Server" cwd="zane/ezycal"{
+    pane split_direction="vertical"{
+      pane name="Terminal" {
+      }
+      pane split_direction="horizontal"{
+        pane name="Rails server"
+        pane name="Frontend"
+        pane name="Redis-server"
+      }
+    }
+  }
+}

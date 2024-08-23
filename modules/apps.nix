@@ -16,8 +16,8 @@
   # But on macOS, it's less stable than homebrew.
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
-  environment.systemPath=["/opt/homebrew/bin"];
-  environment.pathsToLink=["/Applications"];
+  environment.systemPath = ["/opt/homebrew/bin"];
+  environment.pathsToLink = ["/Applications"];
   environment.systemPackages = with pkgs; [
     redis
     awsebcli
@@ -67,14 +67,16 @@
     vscode-extensions.xdebug.php-debug
     php81Extensions.xdebug
 
-    rubyPackages.solargraph
+    # rubyPackages.solargraph
     cachix
     ueberzugpp
     podman
     deadnix
     typos-lsp
     typos
+    gitleaks
     killport
+    # neovim
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -117,6 +119,7 @@
       "gnu-sed"
       "whalebrew"
       "awrit"
+      "rbenv"
       {
         name = "mysql@8.0";
         restart_service = true;
@@ -152,7 +155,9 @@
 
     masApps = {
       "Xcode" = 497799835;
-      "DropOver"= 1355679052;
+      "DropOver" = 1355679052;
     };
+
+    whalebrews = ["whalebrew/wget"];
   };
 }

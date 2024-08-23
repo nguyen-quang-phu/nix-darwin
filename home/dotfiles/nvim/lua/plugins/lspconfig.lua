@@ -199,10 +199,11 @@ return {
         -- },
         ---@type lspconfig.options.solargraph
         solargraph = {
+          mason = false,
           settings = {
             solargraph = {
               diagnostics = false,
-              useBundler = false,
+              useBundler = true,
             },
           },
         },
@@ -265,4 +266,3 @@ return {
     -- end, }
   },
 }
-

@@ -10,3 +10,4 @@ function zet() {
     fi
 }
 eval "$(fnm env --use-on-cd)"
+eval "$(rbenv init -)"
