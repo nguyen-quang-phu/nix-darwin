@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/new-tab.tsx", "../src/uri.ts"],
-  "sourcesContent": ["import { open } from \"@raycast/api\";\nimport { newTab } from \"./uri\";\n\nexport default async function Command() {\n  await open(newTab(\"~\"));\n}\n", "const warpUri = (path: string) => `warp://${path}`;\n\nexport const newTab = (path: string) => warpUri(`action/new_tab?path=${encodeURIComponent(path)}`);\nexport const newWindow = (path: string) => warpUri(`action/new_window?path=${encodeURIComponent(path)}`);\nexport const launchConfig = (path: string) => warpUri(`launch/${encodeURIComponent(path)}`);\n"],
-  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAAqB,wBCArB,IAAMC,EAAWC,GAAiB,UAAUA,IAE/BC,EAAUD,GAAiBD,EAAQ,uBAAuB,mBAAmBC,CAAI,GAAG,EDCjG,eAAOE,GAAiC,CACtC,QAAM,QAAKC,EAAO,GAAG,CAAC,CACxB",
-  "names": ["new_tab_exports", "__export", "Command", "__toCommonJS", "import_api", "warpUri", "path", "newTab", "Command", "newTab"]
-}

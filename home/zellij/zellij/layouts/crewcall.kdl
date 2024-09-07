@@ -1,0 +1,52 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/GO/CREWCALL"
+  tab name="1. API" cwd="zendy/crewcall-api"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server" command="devenv"{
+          args "up"
+        }
+        pane name="Ngrok"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="2. MOBILE" cwd="zendy/crewcall-mobile"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "pubspec.yaml"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server" command="devenv"{
+          args "up"
+        }
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="3. ADMIN" cwd="zendy/crewcall-admin"{
+    pane split_direction="vertical"{
+    pane command="nvim" size="65%" {
+      args "package.json"
+    }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Server" command="devenv"{
+          args "up"
+        }
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

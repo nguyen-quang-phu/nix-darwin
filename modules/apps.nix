@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  ...
+}: {
   ##########################################################################
   #
   #  Install all apps and packages here.
@@ -18,8 +21,9 @@
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   environment.systemPath = ["/opt/homebrew/bin"];
   environment.pathsToLink = ["/Applications"];
+
   environment.systemPackages = with pkgs; [
-    redis
+    # redis
     awsebcli
     clipboard-jh
     codespell
@@ -38,7 +42,6 @@
     pgcli
     postman
     # rectangle
-    ripgrep
     slack
     tldr
     wget
@@ -76,6 +79,8 @@
     typos
     gitleaks
     killport
+    age
+    postgis
     # neovim
   ];
   environment.variables.EDITOR = "nvim";
@@ -119,18 +124,18 @@
       "gnu-sed"
       "whalebrew"
       "awrit"
-      {
-        name = "mysql@8.0";
-        restart_service = true;
-        link = true;
-        conflicts_with = ["mysql"];
-      }
-      {
-        name = "postgresql@14";
-        restart_service = true;
-        link = true;
-        conflicts_with = ["postgresql"];
-      }
+      # {
+      #   name = "mysql@8.0";
+      #   restart_service = true;
+      #   link = true;
+      #   conflicts_with = ["mysql"];
+      # }
+      # {
+      #   name = "postgresql@16";
+      #   restart_service = true;
+      #   link = true;
+      #   conflicts_with = ["postgresql"];
+      # }
       # "aria2"  # download tool
     ];
 

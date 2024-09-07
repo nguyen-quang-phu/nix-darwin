@@ -24,6 +24,11 @@
         hostname = "gitlab.com";
         identityFile = "~/.ssh/harvey-gitlab";
       };
+      gitlab-keynold = {
+        host = "gitlab.com-keynold";
+        hostname = "gitlab.com";
+        identityFile = "~/.ssh/keynold-gitlab";
+      };
       gitlab-zane = {
         host = "gitlab.com-zane";
         hostname = "gitlab.com";

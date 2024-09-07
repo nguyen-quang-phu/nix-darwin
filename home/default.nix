@@ -8,15 +8,22 @@
     ./aws.nix
     ./cli.nix
     ./core.nix
+    ./firefox.nix
     ./git.nix
-    ./neovim.nix
     ./ssh.nix
     ./starship.nix
-    ./terminal.nix
     ./vscode.nix
     ./zathura.nix
-    ./zellij.nix
     ./zsh.nix
+    ./bat
+    ./karabiner
+    ./kitty
+    ./neovim
+    ./pet
+    ./spicetify
+    ./spotify-player
+    ./yazi
+    ./zellij
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -34,32 +41,7 @@
     # the Home Manager release notes for a list of state version
     # changes in each release.
     stateVersion = "24.05";
-    file = {
-      ".config/aerospace" = {
-        source = ./dotfiles/aerospace;
-      };
-      ".config/bat" = {
-        source = ./dotfiles/bat;
-      };
-      ".config/karabiner" = {
-        source = ./dotfiles/karabiner;
-      };
-      ".config/yazi" = {
-        source = ./dotfiles/yazi;
-      };
-      ".config/zellij" = {
-        source = ./dotfiles/zellij;
-      };
-      ".config/spicetify" = {
-        source = ./dotfiles/spicetify;
-      };
-      ".config/spotify-player" = {
-        source = ./dotfiles/spotify-player;
-      };
-      ".config/macchina" = {
-        source = ./dotfiles/macchina;
-      };
-    };
+    file = {};
 
     shellAliases = {
       "..." = "cd ../..";

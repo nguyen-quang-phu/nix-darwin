@@ -25,6 +25,14 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    firefox-darwin = {
+      url = "github:bandithedoge/nixpkgs-firefox-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     secrets = {
       url = "git+ssh://git@github.com/nguyen-quang-phu/nix-secrets.git";
       flake = false;
@@ -39,6 +47,7 @@
     nix-index-database,
     nixpkgs,
     nixvim,
+    firefox-darwin,
     secrets,
     ...
   }: let
@@ -46,6 +55,7 @@
     system = "x86_64-darwin"; # aarch64-darwin or x86_64-darwin
     hostname = "harvey";
     useremail = "nqphu1998" + "@" + "gmail" + "." + "com";
+    pkgs = nixpkgs.legacyPackages.${system};
     specialArgs =
       inputs
       // {
@@ -55,6 +65,7 @@
     darwinConfigurations."${hostname}" = nix-darwin.lib.darwinSystem {
       inherit system specialArgs;
       modules = [
+        ./modules/secrects.nix
         ./modules/nix-core.nix
         ./modules/system.nix
         ./modules/apps.nix
@@ -64,6 +75,7 @@
         # home manager
         home-manager.darwinModules.home-manager
         {
+          nixpkgs.overlays = [firefox-darwin.overlay];
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
@@ -78,9 +90,15 @@
         nix-index-database.darwinModules.nix-index
         # This is the important part -- add this line to your module list!
         lix-module.nixosModules.default
+        agenix.nixosModules.age
+      ];
+    };
+    devShells.${system}.default = pkgs.mkShell {
+      buildInputs = with pkgs; [
+        lefthook
       ];
     };
     # nix code formatter
-    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
+    # formatter.${system} = pkgs.alejandra;
   };
 }

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/new-window.tsx", "../src/uri.ts"],
-  "sourcesContent": ["import { open } from \"@raycast/api\";\nimport { newWindow } from \"./uri\";\n\nexport default async function Command() {\n  await open(newWindow(\"~\"));\n}\n", "const warpUri = (path: string) => `warp://${path}`;\n\nexport const newTab = (path: string) => warpUri(`action/new_tab?path=${encodeURIComponent(path)}`);\nexport const newWindow = (path: string) => warpUri(`action/new_window?path=${encodeURIComponent(path)}`);\nexport const launchConfig = (path: string) => warpUri(`launch/${encodeURIComponent(path)}`);\n"],
-  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAAqB,wBCArB,IAAMC,EAAWC,GAAiB,UAAUA,IAGrC,IAAMC,EAAaC,GAAiBC,EAAQ,0BAA0B,mBAAmBD,CAAI,GAAG,EDAvG,eAAOE,GAAiC,CACtC,QAAM,QAAKC,EAAU,GAAG,CAAC,CAC3B",
-  "names": ["new_window_exports", "__export", "Command", "__toCommonJS", "import_api", "warpUri", "path", "newWindow", "path", "warpUri", "Command", "newWindow"]
-}

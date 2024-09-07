@@ -1,23 +1,5 @@
 {pkgs, ...}: {
   programs = {
-    bat = {
-      enable = true;
-      config = {
-        pager = "less -FR";
-        theme = "Catppuccin Mocha";
-      };
-      themes = {
-        "Catppuccin Mocha" = {
-          src = pkgs.fetchFromGitHub {
-            owner = "catppuccin";
-            repo = "bat";
-            rev = "d714cc1d358ea51bfc02550dabab693f70cccea0";
-            sha256 = "1zlryg39y4dbrycjlp009vd7hx2yvn5zfb03a2vq426z78s7i423";
-          };
-          file = "themes/Catppuccin Mocha.tmTheme";
-        };
-      };
-    };
     direnv = {
       enable = true;
       enableZshIntegration = true;
@@ -45,6 +27,12 @@
       enableZshIntegration = true;
       enableNushellIntegration = true;
     };
+    ripgrep = {
+      enable = true;
+      arguments = [
+        "--iglob=!.git"
+      ];
+    };
     eza = {
       enable = true;
       enableZshIntegration = true;
@@ -67,11 +55,6 @@
     };
     gh = {
       enable = true;
-    };
-    yazi = {
-      enable = true;
-      enableZshIntegration = true;
-      enableNushellIntegration = true;
     };
     pyenv = {
       enable = true;

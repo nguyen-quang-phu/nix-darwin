@@ -90,6 +90,15 @@
             };
           };
         }
+        {
+          condition = "gitdir:~/Code/GO/CREWCALL/zendy/";
+          contents = {
+            user = {
+              email = "keynold.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Keynold Nguyễn";
+            };
+          };
+        }
       ];
 
       extraConfig = {
@@ -165,8 +174,9 @@
         name = "config --local user.name";
 
         br = "rev-parse --abbrev-ref HEAD";
-        can = "commit --amend --reset-author --no-edit";
-        colast = "checkout -";
+        can = "!git add . && git status && git commit --amend --no-edit";
+        cara = "!git commit --amend --reset-author --no-edit";
+        colast = "!git checkout -";
         fsck = "fsck --unreachable | grep commit | cut -d' ' -f3 | xargs git log --merges --no-walk --grep=WIP";
         hide = "update-index --skip-worktree";
         pf = "push --force-with-lease";
