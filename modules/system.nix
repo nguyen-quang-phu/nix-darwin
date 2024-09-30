@@ -16,6 +16,7 @@
       /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
     '';
     keyboard.enableKeyMapping = false; #
+    stateVersion = 4;
 
     defaults = {
       menuExtraClock.Show24Hour = true; # show 24 hour clock

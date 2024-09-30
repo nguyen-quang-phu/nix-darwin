@@ -1,0 +1,35 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="zellij:compact-bar"
+    }
+  }
+
+  cwd "~/Code/GO/RESTORIFIC"
+  tab name="1. RESTORIFIC Backend" cwd="marcus/restorific/restorific-api"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%"{
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Node server"
+        pane name="Node build"
+        pane name="Database"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+
+  tab name="2. RESTORIFIC Frontend" cwd="marcus/restorific/restorific-web"{
+    pane split_direction="vertical"{
+      pane command="nvim" size="65%" {
+        args "package.json"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="React Server"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+}

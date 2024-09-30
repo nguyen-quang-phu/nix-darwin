@@ -2,36 +2,60 @@ return {
   "folke/flash.nvim",
   event = "VeryLazy",
   vscode = true,
-    opts = {
-      modes = {
-        char = {
-          jump_labels = true,
-        },
+  opts = {
+    modes = {
+      char = {
+        jump_labels = true,
       },
     },
+  },
   keys = {
     {
       "s",
-      mode = { "n", "x"},
-      function() require("flash").jump() end,
+      mode = { "n", "x", "o" },
+      function()
+        return false
+      end,
       desc = "Flash",
     },
     {
       "S",
-      mode = { "n", "o"},
-      function() require("flash").treesitter() end,
+      mode = { "n", "x", "o" },
+      function()
+        return false
+      end,
+      desc = "Flash",
+    },
+    {
+      "s",
+      mode = { "n" },
+      function()
+        require("flash").jump()
+      end,
+      desc = "Flash",
+    },
+    {
+      "S",
+      mode = { "n" },
+      function()
+        require("flash").treesitter()
+      end,
       desc = "Flash Treesitter",
     },
     {
-      "r",
+      "gr",
       mode = "o",
-      function() require("flash").remote() end,
+      function()
+        require("flash").remote()
+      end,
       desc = "Remote Flash",
     },
     {
-      "R",
+      "gR",
       mode = { "o", "x" },
-      function() require("flash").treesitter_search() end,
+      function()
+        require("flash").treesitter_search()
+      end,
       desc = "Treesitter Search",
     },
   },

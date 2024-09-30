@@ -14,6 +14,7 @@ return {
     },
   },
   opts = {
+    log_level = vim.log.levels.DEBUG,
     default_format_opts = {
       timeout_ms = 30000,
     },

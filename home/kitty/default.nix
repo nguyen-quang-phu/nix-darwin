@@ -7,7 +7,7 @@
       font.size = 14;
       shellIntegration.enableZshIntegration = true;
       shellIntegration.mode = "no-title no-cursor";
-      theme = "Catppuccin-Mocha";
+      themeFile = "Catppuccin-Mocha";
 
       keybindings = {
         "cmd+1" = "send_text all \\x021";

@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   programs.ssh = {
     enable = true;
     addKeysToAgent = "yes";
@@ -12,7 +12,7 @@
       github = {
         host = "github.com";
         hostname = "github.com";
-        identityFile = "~/.ssh/id_rsa_charlie";
+        identityFile = "~/.ssh/id_ed25519";
       };
       github-charlie = {
         host = "github.com-charlie";
@@ -29,6 +29,11 @@
         hostname = "gitlab.com";
         identityFile = "~/.ssh/keynold-gitlab";
       };
+      gitlab-marcus = {
+        host = "gitlab.com-marcus";
+        hostname = "gitlab.com";
+        identityFile = "~/.ssh/marcus-gitlab";
+      };
       gitlab-zane = {
         host = "gitlab.com-zane";
         hostname = "gitlab.com";
@@ -38,6 +43,11 @@
         host = "github.com-nqp";
         hostname = "github.com";
         identityFile = "~/.ssh/nqp-github";
+      };
+      mynixos-nqp = {
+        host = "git.mynixos.com-nqp";
+        hostname = "git.mynixos.com";
+        identityFile = "~/.ssh/nqphu-mynixos";
       };
       github-baron = {
         host = "github.com-baron";

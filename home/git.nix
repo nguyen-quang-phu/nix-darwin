@@ -99,6 +99,15 @@
             };
           };
         }
+        {
+          condition = "gitdir:~/Code/GO/RESTORIFIC/marcus/";
+          contents = {
+            user = {
+              email = "marcus.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Keynold Nguyễn";
+            };
+          };
+        }
       ];
 
       extraConfig = {
@@ -191,6 +200,7 @@
         "Thumbs.db"
         ".devenv"
         ".direnv"
+        ".lazy.lua"
       ];
     };
 

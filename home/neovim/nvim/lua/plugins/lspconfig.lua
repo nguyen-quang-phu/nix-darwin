@@ -47,13 +47,32 @@ return {
         emmet_language_server = {},
         sqls = {},
         css_variables = {},
-        cssls = {},
+        cssls = {
+          settings = {
+            css = { validate = true, lint = {
+              unknownAtRules = "ignore",
+            } },
+            scss = { validate = true, lint = {
+              unknownAtRules = "ignore",
+            } },
+            less = { validate = true, lint = {
+              unknownAtRules = "ignore",
+            } },
+          },
+        },
         phpactor = {},
         volar = {
           settings = {
             volar = {
               filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
             },
+          },
+        },
+        stimulus_ls = {
+          filetypes = { "html", "ruby", "eruby", "blade", "php", "slim" },
+
+          settings = {
+            stimulus_ls = {},
           },
         },
         ---@type lspconfig.options.gopls
@@ -241,7 +260,7 @@ return {
           mason = false,
         },
         typos_lsp = {
-          mason = false,
+          mason = true,
         },
         ---@type lspconfig.options.standardrb
         -- standardrb = {

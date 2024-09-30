@@ -1,4 +1,5 @@
 {
+  agenix,
   pkgs,
   ...
 }: {
@@ -23,6 +24,7 @@
   environment.pathsToLink = ["/Applications"];
 
   environment.systemPackages = with pkgs; [
+    agenix.packages."${pkgs.system}".default
     # redis
     awsebcli
     clipboard-jh
@@ -81,6 +83,8 @@
     killport
     age
     postgis
+    rubyPackages.solargraph
+    rubocop
     # neovim
   ];
   environment.variables.EDITOR = "nvim";
@@ -124,12 +128,12 @@
       "gnu-sed"
       "whalebrew"
       "awrit"
-      # {
-      #   name = "mysql@8.0";
-      #   restart_service = true;
-      #   link = true;
-      #   conflicts_with = ["mysql"];
-      # }
+      {
+        name = "mysql@8.0";
+        restart_service = true;
+        link = true;
+        conflicts_with = ["mysql"];
+      }
       # {
       #   name = "postgresql@16";
       #   restart_service = true;
@@ -155,11 +159,13 @@
       "spotify"
       "amazon-q"
       "raycast"
+      "doll"
     ];
 
     masApps = {
       "Xcode" = 497799835;
       "DropOver" = 1355679052;
+      # "Amphetamine" = 937984704;
     };
 
     whalebrews = ["whalebrew/wget"];

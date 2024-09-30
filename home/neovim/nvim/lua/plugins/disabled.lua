@@ -9,10 +9,10 @@ return {
   },
   {
     "akinsho/bufferline.nvim",
-    enabled = false
+    enabled = false,
   },
   {
     "kylechui/nvim-surround",
-    enabled = false
-  }
+    enabled = true,
+  },
 }
