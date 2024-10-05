@@ -85,11 +85,12 @@
     postgis
     rubyPackages.solargraph
     rubocop
+    bundler
     # neovim
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    nerdfonts
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -115,6 +116,7 @@
       "homebrew/services"
       "nikitabobko/tap" # aerospace
       "chase/tap"
+      "FelixKratz/formulae"
     ];
 
     # `brew install`
@@ -129,11 +131,19 @@
       "whalebrew"
       "awrit"
       {
-        name = "mysql@8.0";
+        name = "felixkratz/formulae/borders";
         restart_service = true;
-        link = true;
-        conflicts_with = ["mysql"];
       }
+      {
+        name = "felixkratz/formulae/sketchybar";
+        restart_service = true;
+      }
+      # {
+      #   name = "mysql@8.0";
+      #   restart_service = true;
+      #   link = true;
+      #   conflicts_with = ["mysql"];
+      # }
       # {
       #   name = "postgresql@16";
       #   restart_service = true;

@@ -104,7 +104,16 @@
           contents = {
             user = {
               email = "marcus.nguyen.goldenowl" + "@" + "gmail" + "." + "com";
-              name = "Keynold Nguyễn";
+              name = "Marcus Nguyễn";
+            };
+          };
+        }
+        {
+          condition = "gitdir:~/Code/GO/MERLIN/tim/";
+          contents = {
+            user = {
+              email = "tim.luong.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "tim-merlin";
             };
           };
         }
@@ -201,6 +210,11 @@
         ".devenv"
         ".direnv"
         ".lazy.lua"
+        "/Users/harvey/Code/GO/MERLIN/tim/merlin/.envrc"
+        "/Users/harvey/Code/GO/MERLIN/tim/merlin/devenv.lock"
+        "/Users/harvey/Code/GO/MERLIN/tim/merlin/devenv.yaml"
+        "/Users/harvey/Code/GO/MERLIN/tim/merlin/devenv.nix"
+        "/Users/harvey/Code/GO/MERLIN/tim/merlin/justfile"
       ];
     };
 

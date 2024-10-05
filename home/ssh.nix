@@ -59,6 +59,11 @@
         hostname = "github.com";
         identityFile = "~/.ssh/troy-github";
       };
+      github-tim = {
+        host = "github.com-tim";
+        hostname = "github.com";
+        identityFile = "~/.ssh/tim-github";
+      };
       bitbucket-troy = {
         host = "bitbucket.org-troy";
         hostname = "bitbucket.org";

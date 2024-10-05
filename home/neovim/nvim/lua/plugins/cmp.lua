@@ -12,11 +12,27 @@ return {
         return nil
       end
 
-      local index = indexOf(opts.sources, "snippets")
-      if index ~= nil then
-        opts.sources[index] = {
+      local snippets_index = indexOf(opts.sources, "snippets")
+      if snippets_index ~= nil then
+        opts.sources[snippets_index] = {
           name = "snippets",
           priority = 150,
+        }
+      end
+
+      local codeium_index = indexOf(opts.sources, "codeium")
+      if codeium_index ~= nil then
+        opts.sources[codeium_index] = {
+          name = "codeium",
+          priority = 90,
+        }
+      end
+
+      local lsp_index = indexOf(opts.sources, "nvim_lsp")
+      if lsp_index ~= nil then
+        opts.sources[lsp_index] = {
+          name = "nvim_lsp",
+          priority = 100,
         }
       end
     end,
