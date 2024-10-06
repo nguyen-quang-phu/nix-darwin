@@ -10,10 +10,10 @@ layout {
   tab name="Config" focus=true {
     pane split_direction="vertical" {
       pane split_direction="horizontal" {
-        pane name="Nvim" cwd="home/dotfiles/nvim" command="nvim"{
+        pane name="Nvim" cwd="home/neovim/nvim" command="nvim"{
           args "init.lua"
         } 
-        pane name="Zellij" cwd="home/dotfiles/zellij" command="nvim"{
+        pane name="Zellij" cwd="home/zellij/zellij" command="nvim"{
           args "config.kdl"
         } 
       }

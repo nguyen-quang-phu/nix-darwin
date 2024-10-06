@@ -166,9 +166,9 @@
         fetch.fsckObjects = true;
         receive.fsckObjects = true;
         url = {
-          "git@github.com:".insteadOf = "https://github.com/";
+          # "git@github.com:".insteadOf = "https://github.com/";
           # "ssh://git@github.com".pushInsteadOf = "gh:";
-          "git@gitlab.com:".insteadOf = "https://gitlab.com/";
+          # "git@gitlab.com:".insteadOf = "https://gitlab.com/";
           # "ssh://git@gitlab.com".pushInsteadOf = "gl:";
         };
       };
@@ -210,11 +210,11 @@
         ".devenv"
         ".direnv"
         ".lazy.lua"
-        "/Users/harvey/Code/GO/MERLIN/tim/merlin/.envrc"
-        "/Users/harvey/Code/GO/MERLIN/tim/merlin/devenv.lock"
-        "/Users/harvey/Code/GO/MERLIN/tim/merlin/devenv.yaml"
-        "/Users/harvey/Code/GO/MERLIN/tim/merlin/devenv.nix"
-        "/Users/harvey/Code/GO/MERLIN/tim/merlin/justfile"
+        "~/Code/GO/MERLIN/tim/merlin/.envrc"
+        "~/Code/GO/MERLIN/tim/merlin/devenv.lock"
+        "~/Code/GO/MERLIN/tim/merlin/devenv.yaml"
+        "~/Code/GO/MERLIN/tim/merlin/devenv.nix"
+        "~/Code/GO/MERLIN/tim/merlin/justfile"
       ];
     };
 
