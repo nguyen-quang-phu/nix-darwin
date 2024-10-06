@@ -11,7 +11,12 @@ return {
         show_hidden = true,
         natural_order = true,
         is_always_hidden = function(name, _)
-          return name == ".." or name == ".git"
+          return name == ".."
+            or name == ".git"
+            or name == "node_modules"
+            or name == ".direnv"
+            or name == ".devenv"
+            or name == ".DS_Store"
         end,
       },
       window_options = {
@@ -39,5 +44,20 @@ return {
     -- Optional dependencies
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+  },
+  {
+    "chrishrb/gx.nvim",
+    keys = {
+      {
+        "gx",
+        "<cmd>Browse<cr>",
+        mode = { "n", "x" },
+      },
+    },
+    cmd = { "Browse" },
+    init = function()
+      vim.g.netrw_nogx = 1
+    end,
+    config = true,
   },
 }

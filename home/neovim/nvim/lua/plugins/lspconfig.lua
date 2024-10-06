@@ -6,6 +6,7 @@ return {
       -- stylua: ignore
       vim.list_extend(Keys, {
         { "gr", false, desc = "References", nowait = true },
+        { "gR", false, desc = "References", nowait = true },
         { "gI", false, desc = "Goto Implementation" },
         { "gy", false, desc = "Goto T[y]pe Definition" },
       })
