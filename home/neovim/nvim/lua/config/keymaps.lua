@@ -11,3 +11,6 @@ vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR
 vim.keymap.set("n", "<Leader>e", function()
   require("oil").toggle_float()
 end, opts)
+vim.keymap.set("n", "<C-t>", function()
+  require("menu").open("default")
+end, {})

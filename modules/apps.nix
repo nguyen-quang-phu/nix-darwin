@@ -1,8 +1,4 @@
-{
-  agenix,
-  pkgs,
-  ...
-}: {
+{ agenix, pkgs, ... }: {
   ##########################################################################
   #
   #  Install all apps and packages here.
