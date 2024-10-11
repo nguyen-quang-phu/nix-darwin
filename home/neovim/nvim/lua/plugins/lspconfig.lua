@@ -260,6 +260,7 @@ return {
         nil_ls = {
           mason = false,
         },
+        kulala_ls = {},
         typos_lsp = {
           mason = true,
         },

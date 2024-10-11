@@ -82,6 +82,7 @@
     rubyPackages.solargraph
     rubocop
     bundler
+    process-compose
     # neovim
   ];
   environment.variables.EDITOR = "nvim";
@@ -125,7 +126,7 @@
       "spotify_player"
       "gnu-sed"
       "whalebrew"
-      "awrit"
+      # "awrit"
       {
         name = "felixkratz/formulae/borders";
         restart_service = true;
@@ -152,7 +153,7 @@
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
-      "aerospace"
+      "nikitabobko/tap/aerospace"
       "alt-tab"
       "android-studio"
       "arc"
@@ -160,7 +161,6 @@
       "evkey"
       "google-chrome"
       "karabiner-elements"
-      "meld"
       "numi"
       "spotify"
       "amazon-q"
@@ -174,6 +174,8 @@
       # "Amphetamine" = 937984704;
     };
 
-    whalebrews = ["whalebrew/wget"];
+    whalebrews = [
+      # "whalebrew/wget"
+    ];
   };
 }

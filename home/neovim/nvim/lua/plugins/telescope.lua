@@ -9,6 +9,8 @@ return {
         ".git",
         ".direnv",
         ".devenv",
+        "log",
+        "tmp",
       },
       layout_config = {
         horizontal = {
