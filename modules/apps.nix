@@ -81,7 +81,8 @@
     postgis
     rubyPackages.solargraph
     rubocop
-    bundler
+    git-crypt
+    # bundler
     process-compose
     # neovim
   ];

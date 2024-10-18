@@ -10,17 +10,11 @@ layout {
   tab name="Config" focus=true {
     pane split_direction="vertical" {
       pane split_direction="horizontal" {
-        pane name="Nvim" cwd="home/neovim/nvim" command="nvim"{
-          args "init.lua"
-        } 
-        pane name="Zellij" cwd="home/zellij/zellij" command="nvim"{
-          args "config.kdl"
-        } 
+        pane name="Nvim" cwd="home/neovim/nvim" edit="init.lua"
+        pane name="Zellij" cwd="home/zellij/zellij" edit="config.kdl"
       }
       pane split_direction="horizontal" {
-        pane name="Nix-Darwin" command="nvim"{
-          args "flake.nix"
-        } 
+        pane name="Nix-Darwin" edit="flake.nix"
         pane name="Terminal"{
           cwd "~"
         } 

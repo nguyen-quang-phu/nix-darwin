@@ -134,6 +134,7 @@
 
         fetch.prune = true;
         pull.ff = "only"; # equivalent to --ff-only
+        pull.rebase = true;
         push = {
           default = "current";
           followTags = true;
@@ -210,11 +211,10 @@
         ".devenv"
         ".direnv"
         ".lazy.lua"
-        "~/Code/GO/MERLIN/tim/merlin/.envrc"
-        "~/Code/GO/MERLIN/tim/merlin/devenv.lock"
-        "~/Code/GO/MERLIN/tim/merlin/devenv.yaml"
-        "~/Code/GO/MERLIN/tim/merlin/devenv.nix"
-        "~/Code/GO/MERLIN/tim/merlin/justfile"
+        ".envrc"
+        "devenv.yaml"
+        "devenv.nix"
+        "justfile"
       ];
     };
 
@@ -248,6 +248,12 @@
           }
         ];
       };
+    };
+    gh = {
+      enable = true;
+    };
+    gh-dash = {
+      enable = true;
     };
   };
 }
