@@ -28,6 +28,10 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
+  sops.defaultSopsFile = ./serects/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "~/.config/sops/age/keys.txt";
+
   home = {
     inherit username;
     homeDirectory = "/Users/${username}";

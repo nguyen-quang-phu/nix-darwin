@@ -215,6 +215,7 @@
         "devenv.yaml"
         "devenv.nix"
         "justfile"
+        "vendor"
       ];
     };
 

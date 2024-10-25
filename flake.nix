@@ -33,6 +33,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     secrets = {
       url = "git+ssh://git@github.com/nguyen-quang-phu/nix-secrets.git";
       flake = false;
@@ -48,6 +52,7 @@
     nixpkgs,
     nixvim,
     firefox-darwin,
+    sops-nix,
     secrets,
     ...
   }: let
@@ -82,6 +87,9 @@
             extraSpecialArgs = specialArgs;
             users.${username} = import ./home;
             backupFileExtension = "backup";
+            sharedModules = [
+              sops-nix.homeManagerModules.sops
+            ];
           };
         }
 

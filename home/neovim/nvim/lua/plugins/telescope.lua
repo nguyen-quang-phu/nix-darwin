@@ -11,6 +11,7 @@ return {
         ".devenv",
         "log",
         "tmp",
+        "js",
       },
       layout_config = {
         horizontal = {
@@ -32,7 +33,7 @@ return {
       function()
         require("telescope.builtin").live_grep({
           additional_args = function(args)
-            return vim.list_extend(args, { "--hidden", "--no-ignore" })
+            return vim.list_extend(args, { "--hidden", "--no-ignore-vcs" })
           end,
         })
       end,

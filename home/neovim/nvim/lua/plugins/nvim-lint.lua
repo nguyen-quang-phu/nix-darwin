@@ -12,7 +12,7 @@ return {
   enabled = true,
   opts = {
     linters_by_ft = {
-      nix = { "statix","deadnix" },
+      nix = { "statix", "deadnix" },
       lua = { "luacheck" },
       ruby = { "rubocop", "reek" },
       eruby = { "erb_lint" },
@@ -25,6 +25,7 @@ return {
     },
     linters = {
       rubocop = {
+        stdin = false,
         cmd = "bundle",
         args = {
           "exec",
@@ -32,8 +33,6 @@ return {
           "--format",
           "json",
           "--force-exclusion",
-          "--server",
-          "--stdin",
           function()
             return vim.api.nvim_buf_get_name(0)
           end,
