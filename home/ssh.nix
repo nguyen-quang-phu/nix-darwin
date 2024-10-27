@@ -12,12 +12,20 @@
       github = {
         host = "github.com";
         hostname = "github.com";
+        identitiesOnly = true;
         identityFile = config.sops.secrets."ssh/github/default".path;
       };
       github-charlie = {
         host = "github.com-charlie";
         hostname = "github.com";
-        identityFile = "~/.ssh/id_rsa_charlie";
+        identitiesOnly = true;
+        identityFile = config.sops.secrets."ssh/github/charlie".path;
+      };
+      github-nqp = {
+        host = "github.com-nqp";
+        hostname = "github.com";
+        identitiesOnly = true;
+        identityFile = config.sops.secrets."ssh/github/nqphu".path;
       };
       gitlab-harvey = {
         host = "gitlab.com-harvey";
@@ -38,11 +46,6 @@
         host = "gitlab.com-zane";
         hostname = "gitlab.com";
         identityFile = "~/.ssh/zane-gitlab";
-      };
-      github-nqp = {
-        host = "github.com-nqp";
-        hostname = "github.com";
-        identityFile = "~/.ssh/nqp-github";
       };
       mynixos-nqp = {
         host = "git.mynixos.com-nqp";
