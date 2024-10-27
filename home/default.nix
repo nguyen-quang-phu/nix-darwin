@@ -6,31 +6,29 @@
   # import sub modules
   imports = [
     ./aws.nix
+    ./bat
     ./cli.nix
     ./core.nix
     ./firefox.nix
     ./git.nix
-    ./ssh.nix
-    ./starship.nix
-    ./vscode.nix
-    ./zathura.nix
-    ./zsh.nix
-    ./bat
     ./karabiner
     ./kitty
     ./neovim
     ./pet
+    ./sops
     ./spicetify
     ./spotify-player
+    ./ssh.nix
+    ./starship.nix
+    ./vscode.nix
     ./yazi
+    ./zathura.nix
     ./zellij
+    ./zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  sops.defaultSopsFile = ./serects/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
-  sops.age.keyFile = "~/.config/sops/age/keys.txt";
 
   home = {
     inherit username;
@@ -51,6 +49,7 @@
       "..." = "cd ../..";
       "code" = "codium";
       "darwin-build" = "just -f ~/.config/nix-darwin/justfile build";
+      "edit-secrets" = "just -f ~/.config/nix-darwin/justfile edit-secrets";
       "darwin-update" = "just -f ~/.config/nix-darwin/justfile update";
       "ze" = "zellij";
       "zed" = "ze a -c default";

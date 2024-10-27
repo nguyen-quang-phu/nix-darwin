@@ -85,6 +85,8 @@
     # bundler
     process-compose
     # neovim
+    sops
+    gnupg
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [

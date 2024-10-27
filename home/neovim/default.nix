@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.neovim = {
     enable = true;
     withNodeJs = true;
@@ -11,6 +15,7 @@
     defaultEditor = true;
   };
   xdg.configFile.nvim.source = ./nvim;
+
   home.sessionVariables = {
     EDITOR = "nvim";
   };

@@ -11,7 +11,6 @@ return {
         ".devenv",
         "log",
         "tmp",
-        "js",
       },
       layout_config = {
         horizontal = {

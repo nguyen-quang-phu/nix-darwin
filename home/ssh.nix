@@ -12,7 +12,7 @@
       github = {
         host = "github.com";
         hostname = "github.com";
-        identityFile = "~/.ssh/id_ed25519";
+        identityFile = config.sops.secrets."ssh/github/default".path;
       };
       github-charlie = {
         host = "github.com-charlie";
