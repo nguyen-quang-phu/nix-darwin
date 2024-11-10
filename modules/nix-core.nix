@@ -18,9 +18,9 @@
       experimental-features = ["nix-command" "flakes"];
 
       builders-use-substitutes = true;
-      auto-optimise-store = true;
       warn-dirty = false;
     };
+    optimise.automatic = true;
 
     gc = {
       user = "root";

@@ -63,5 +63,4 @@
   # this is required if you want to use darwin's default shell - zsh
   programs.zsh.enable = true;
   environment.shells = with pkgs; [bash zsh];
-  environment.loginShell = pkgs.zsh;
 }
