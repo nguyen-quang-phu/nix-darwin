@@ -12,10 +12,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,7 +38,6 @@
     home-manager,
     lix-module,
     nix-darwin,
-    nix-index-database,
     nixpkgs,
     firefox-darwin,
     sops-nix,
@@ -85,7 +80,6 @@
           };
         }
 
-        nix-index-database.darwinModules.nix-index
         lix-module.nixosModules.default
       ];
     };
