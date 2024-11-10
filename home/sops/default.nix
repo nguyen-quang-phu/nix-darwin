@@ -6,8 +6,8 @@
       home = "~/.gnupg";
       sshKeyPaths = [];
     };
-    # defaultSymlinkPath = "/run/user/1000/secrets";
-    # defaultSecretsMountPoint = "/run/user/1000/secrets.d";
+    # defaultSymlinkPath = "/run/secrets";
+    # defaultSecretsMountPoint = "/run/secrets.d";
   };
   sops.secrets."ssh/github/default" = {};
   sops.secrets."ssh/github/charlie" = {};
@@ -20,4 +20,6 @@
   sops.secrets."ssh/gitlab/keynold" = {};
   sops.secrets."ssh/gitlab/marcus" = {};
   sops.secrets."ssh/gitlab/zane" = {};
+
+  sops.secrets.email = {};
 }

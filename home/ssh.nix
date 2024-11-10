@@ -79,6 +79,11 @@
         hostname = "bitbucket.org";
         identityFile = "~/.ssh/troy-bitbucket";
       };
+      gitlab-silas = {
+        host = "gitlab.com-silas";
+        hostname = "gitlab.com";
+        identityFile = "~/.ssh/gitlab_silas";
+      };
     };
   };
 }

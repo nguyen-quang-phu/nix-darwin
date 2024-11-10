@@ -25,6 +25,7 @@
     ./zathura.nix
     ./zellij
     ./zsh.nix
+    ./aerc
   ];
 
   # Home Manager needs a bit of information about you and the

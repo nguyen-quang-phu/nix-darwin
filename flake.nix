@@ -12,11 +12,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    agenix.url = "github:ryantm/agenix";
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,13 +39,11 @@
   };
 
   outputs = inputs @ {
-    agenix,
     home-manager,
     lix-module,
     nix-darwin,
     nix-index-database,
     nixpkgs,
-    nixvim,
     firefox-darwin,
     sops-nix,
     secrets,
@@ -70,7 +63,6 @@
     darwinConfigurations."${hostname}" = nix-darwin.lib.darwinSystem {
       inherit system specialArgs;
       modules = [
-        ./modules/secrects.nix
         ./modules/nix-core.nix
         ./modules/system.nix
         ./modules/apps.nix
@@ -93,12 +85,8 @@
           };
         }
 
-        nixvim.nixDarwinModules.nixvim
-        agenix.darwinModules.default
         nix-index-database.darwinModules.nix-index
-        # This is the important part -- add this line to your module list!
         lix-module.nixosModules.default
-        agenix.nixosModules.age
       ];
     };
     devShells.${system}.default = pkgs.mkShell {

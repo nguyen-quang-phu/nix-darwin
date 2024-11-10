@@ -2,6 +2,7 @@
   lib,
   username,
   useremail,
+  config,
   ...
 }: {
   # `programs.git` will generate the config file: ~/.config/git/config
@@ -23,6 +24,7 @@
           contents = {
             user = {
               email = useremail;
+              # email = builtins.readFile(config.sops.secrets.email.path);
               name = username;
             };
           };
@@ -216,6 +218,10 @@
         "devenv.nix"
         "justfile"
         "vendor"
+        ".ignore"
+        "Gemfile.local"
+        "Gemfile.local.lock"
+        "bin"
       ];
     };
 

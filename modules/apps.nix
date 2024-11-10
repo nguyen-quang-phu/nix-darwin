@@ -1,4 +1,7 @@
-{ agenix, pkgs, ... }: {
+{
+  pkgs,
+  ...
+}: {
   ##########################################################################
   #
   #  Install all apps and packages here.
@@ -20,7 +23,6 @@
   environment.pathsToLink = ["/Applications"];
 
   environment.systemPackages = with pkgs; [
-    agenix.packages."${pkgs.system}".default
     # redis
     awsebcli
     clipboard-jh
@@ -87,6 +89,8 @@
     # neovim
     sops
     gnupg
+    # darwin.IOKit
+    # kmonad
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [

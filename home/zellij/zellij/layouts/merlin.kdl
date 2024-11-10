@@ -7,15 +7,31 @@ layout {
   }
 
   cwd "~/Code/GO/MERLIN/"
-  tab name="1. MERLIN" cwd="tim/merlin"{
+  tab name="1. IAMMERLIN" cwd="tim/iammerlin"{
     pane split_direction="vertical" {
-      pane size="65%" edit="Gemfile" focus=true  
+      pane command="nvim" size="65%" focus=true {
+        args "Gemfile"
+      }
       pane split_direction="horizontal" size="35%" {
         pane name="Rails server"
         pane name="Rails frontend"
         pane name="Database"
         pane name="Rails console"
-        pane name="Terminal"
+        pane focus=true name="Terminal"
+      }
+    }
+  }
+  tab name="2. ASKMERLIN" cwd="tim/askmerlin"{
+    pane split_direction="vertical" {
+      pane command="nvim" size="65%" focus=true {
+        args "Gemfile"
+      }
+      pane split_direction="horizontal" size="35%" {
+        pane name="Rails server"
+        pane name="Rails frontend"
+        pane name="Database"
+        pane name="Rails console"
+        pane focus=true name="Terminal"
       }
     }
   }

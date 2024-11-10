@@ -143,6 +143,7 @@ return {
             augend.semver.alias.semver, -- versioning (v1.1.2)
           },
           ruby = {
+            logical_alias,
             augend.constant.new({
               elements = { "belongs_to", "has_one", "has_many" },
               word = true, -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
