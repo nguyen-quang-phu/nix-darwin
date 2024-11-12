@@ -60,9 +60,9 @@
       enable = true;
       enableZshIntegration = true;
     };
-    aerc = {
-      enable = true;
-    };
+    # aerc = {
+    #   enable = true;
+    # };
     nushell = {
       enable = true;
     };
