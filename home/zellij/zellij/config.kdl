@@ -118,6 +118,11 @@ keybinds {
       };
       SwitchToMode "Normal";
     }
+    bind "y" {
+      LaunchOrFocusPlugin "file:~/.config/zellij/plugins/harpoon.wasm" {
+          floating true; move_to_focused_tab true;
+      }
+    }
     bind "1" {GoToTab 1; SwitchToMode "Normal";}
     bind "2" {GoToTab 2; SwitchToMode "Normal";}
     bind "3" {GoToTab 3; SwitchToMode "Normal";}
