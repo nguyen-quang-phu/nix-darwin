@@ -1,0 +1,7 @@
+{...}: {
+  programs = {
+    taskwarrior = {
+      enable = true;
+    };
+  };
+}

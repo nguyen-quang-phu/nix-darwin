@@ -133,6 +133,7 @@
       "spotify_player"
       "gnu-sed"
       "whalebrew"
+      "taskwarrior-tui"
       # "awrit"
       {
         name = "felixkratz/formulae/borders";
