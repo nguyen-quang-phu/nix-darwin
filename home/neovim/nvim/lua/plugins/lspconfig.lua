@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    dependencies = "netmute/ctags-lsp.nvim",
     opts = function()
       local Keys = require("lazyvim.plugins.lsp.keymaps").get()
       -- stylua: ignore
@@ -261,6 +262,7 @@ return {
           mason = false,
         },
         kulala_ls = {},
+        ctags_lsp = {},
         typos_lsp = {
           mason = true,
         },
@@ -286,4 +288,5 @@ return {
     --   })
     -- end, }
   },
+  -- lazy.nvim
 }

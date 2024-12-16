@@ -1,0 +1,108 @@
+return {
+  -- {
+  --   "saghen/blink.cmp",
+  --   lazy = false, -- lazy loading handled internally
+  --   -- optional: provides snippets for the snippet source
+  --   dependencies = "rafamadriz/friendly-snippets",
+  --
+  --   -- use a release tag to download pre-built binaries
+  --   version = "v0.*",
+  --   -- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+  --   -- build = 'cargo build --release',
+  --   -- If you use nix, you can build from source using latest nightly rust with:
+  --   -- build = 'nix run .#build-plugin',
+  --
+  --   ---@module 'blink.cmp'
+  --   ---@type blink.cmp.Config
+  --   opts = {
+  --     -- 'default' for mappings similar to built-in completion
+  --     -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
+  --     -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
+  --     -- see the "default configuration" section below for full documentation on how to define
+  --     -- your own keymap.
+  --     keymap = { preset = "default" },
+  --     completion = {
+  --       menu = {
+  --         draw = {
+  --           treesitter = true,
+  --           columns = {
+  --             { "label", "label_description", gap = 1 },
+  --             { "kind_icon", "kind" },
+  --           },
+  --           components = {
+  --             kind_icon = {
+  --               ellipsis = false,
+  --               text = function(ctx)
+  --                 return ctx.kind_icon .. ctx.icon_gap
+  --               end,
+  --               highlight = function(ctx)
+  --                 return require("blink.cmp.completion.windows.render.tailwind").get_hl(ctx)
+  --                   or "BlinkCmpKind" .. ctx.kind
+  --               end,
+  --             },
+  --
+  --             kind = {
+  --               ellipsis = false,
+  --               width = { fill = true },
+  --               text = function(ctx)
+  --                 return ctx.kind
+  --               end,
+  --               highlight = function(ctx)
+  --                 return require("blink.cmp.completion.windows.render.tailwind").get_hl(ctx)
+  --                   or "BlinkCmpKind" .. ctx.kind
+  --               end,
+  --             },
+  --
+  --             label = {
+  --               width = { fill = true, max = 60 },
+  --               text = function(ctx)
+  --                 return ctx.label .. ctx.label_detail
+  --               end,
+  --               highlight = function(ctx)
+  --                 -- label and label details
+  --                 local highlights = {
+  --                   { 0, #ctx.label, group = ctx.deprecated and "BlinkCmpLabelDeprecated" or "BlinkCmpLabel" },
+  --                 }
+  --                 if ctx.label_detail then
+  --                   table.insert(
+  --                     highlights,
+  --                     { #ctx.label, #ctx.label + #ctx.label_detail, group = "BlinkCmpLabelDetail" }
+  --                   )
+  --                 end
+  --
+  --                 -- characters matched on the label by the fuzzy matcher
+  --                 for _, idx in ipairs(ctx.label_matched_indices) do
+  --                   table.insert(highlights, { idx, idx + 1, group = "BlinkCmpLabelMatch" })
+  --                 end
+  --
+  --                 return highlights
+  --               end,
+  --             },
+  --
+  --             label_description = {
+  --               width = { max = 30 },
+  --               text = function(ctx)
+  --                 return ctx.label_description
+  --               end,
+  --               highlight = "BlinkCmpLabelDescription",
+  --             },
+  --
+  --             source_name = {
+  --               width = { max = 30 },
+  --               text = function(ctx)
+  --                 return ctx.source_name
+  --               end,
+  --               highlight = "BlinkCmpSource",
+  --             },
+  --           },
+  --         },
+  --       },
+  --     },
+  --     -- enable completion sources
+  --     -- 'path' for file system paths
+  --   },
+  --   -- allows extending the enabled_providers array elsewhere in your config
+  --   -- without having to redefine it
+  --   opts_extend = { "sources.completion.enabled_providers" },
+  -- },
+}

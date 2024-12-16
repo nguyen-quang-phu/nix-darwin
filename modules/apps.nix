@@ -91,6 +91,9 @@
     gnupg
     # darwin.IOKit
     # kmonad
+    goku
+    universal-ctags
+    docker
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
@@ -121,6 +124,7 @@
       "nikitabobko/tap" # aerospace
       "chase/tap"
       "FelixKratz/formulae"
+      "netmute/tap"
     ];
 
     # `brew install`
@@ -134,6 +138,7 @@
       "gnu-sed"
       "whalebrew"
       "taskwarrior-tui"
+      "ctags-lsp"
       # "awrit"
       {
         name = "felixkratz/formulae/borders";
@@ -177,7 +182,7 @@
     ];
 
     masApps = {
-      "Xcode" = 497799835;
+      # "Xcode" = 497799835;
       "DropOver" = 1355679052;
       # "Amphetamine" = 937984704;
     };
