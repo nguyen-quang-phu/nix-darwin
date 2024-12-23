@@ -16,4 +16,3 @@ nix run --extra-experimental-features 'nix-command flakes' nix-darwin -- switch 
 - Update macos
 ```
   darwin-build
-```

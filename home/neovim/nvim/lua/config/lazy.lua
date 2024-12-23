@@ -13,8 +13,11 @@ require("lazy").setup({
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.ai.codeium" },
     { import = "lazyvim.plugins.extras.ai.supermaven" },
+    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+    { import = "lazyvim.plugins.extras.ai.copilot" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
-    -- { import = "lazyvim.plugins.extras.coding.blink" },
+    { import = "lazyvim.plugins.extras.coding.blink" },
+    -- { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.dap.nlua" },
     { import = "lazyvim.plugins.extras.ui.edgy" },

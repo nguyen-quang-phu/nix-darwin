@@ -119,6 +119,15 @@
             };
           };
         }
+        {
+          condition = "gitdir:~/Code/GO/AITIS/gavin";
+          contents = {
+            user = {
+              email = "gavin.tran.goldenowl" + "@" + "gmail" + "." + "com";
+              name = "Gavin-Tran-GoldenOwl";
+            };
+          };
+        }
       ];
 
       extraConfig = {

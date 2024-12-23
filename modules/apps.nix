@@ -94,6 +94,7 @@
     goku
     universal-ctags
     docker
+    fzf
   ];
   environment.variables.EDITOR = "nvim";
   fonts.packages = with pkgs; [
