@@ -1,4 +1,5 @@
 {...}: {
+  # https://donsnotes.com/tech/charsets/ascii.html
   programs = {
     kitty = {
       enable = true;

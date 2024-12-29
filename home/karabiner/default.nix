@@ -1,3 +1,3 @@
 {...}: {
-  xdg.configFile.karabiner.source = ./karabiner;
+  # xdg.configFile.karabiner.source = ./karabiner;
 }

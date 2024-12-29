@@ -101,7 +101,7 @@ keybinds {
       SwitchToMode "Normal"
     }
   }
-  tmux {
+  tmux clear-defaults=true{
     bind "v" { SwitchToMode "Pane";NewPane "Down"; SwitchToMode "Normal";}
     bind "V" { SwitchToMode "Pane";NewPane "Right"; SwitchToMode "Normal";}
     bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
@@ -110,6 +110,7 @@ keybinds {
     bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
     bind "x" { CloseFocus; SwitchToMode "Normal"; }
     bind "d" { Detach; }
+    bind "z" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
     bind "s" {
       SwitchToMode "Session";
       LaunchOrFocusPlugin "zellij:session-manager" {
@@ -133,6 +134,7 @@ keybinds {
     bind "8" {GoToTab 8; SwitchToMode "Normal";}
     bind "9" {GoToTab 9; SwitchToMode "Normal";}
     bind "m" {SwitchToMode "Move";}
+    bind "g" { SwitchToMode "Locked"; }
     bind "e" { SwitchToMode "Scroll"; EditScrollback; SwitchToMode "Normal";}
     bind "p" { SwitchToMode "Pane"; }
     bind "t" { SwitchToMode "Tab"; }

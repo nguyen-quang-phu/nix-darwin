@@ -14,6 +14,12 @@ return {
       end,
       desc = "Open the file manager",
     },
+    {
+      -- Open in the current working directory
+      "<leader>e",
+      "<cmd>Yazi cwd<cr>",
+      desc = "Open the file manager in nvim's working directory",
+    },
     -- {
     --   -- Open in the current working directory
     --   "<leader><space>",
